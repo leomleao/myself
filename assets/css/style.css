@@ -604,19 +604,14 @@ header {
 .nav-inner nav li.subnav ul li a i.subnavicon {
 	display:none;
 }
-.nav-lang{
+.nav-lang a img {
 	position:absolute;
-	top:10px;
-	right:76px;
+	top:16px;
+	right:-100px;
 	z-index:21;
 	cursor:pointer;
-}
-.nav-lang ul{
-  list-style-type: none;
-}
-.nav-lang li{   
-
-
+	width: 64px;
+	height: 38px;
 }
 .nav-lang a{
     opacity:0.7;

@@ -1,12 +1,50 @@
 // all functions ------------------
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   
 
-  ga('create', 'UA-75618295-1', 'auto');
-  ga('send', 'pageview');
+  // ga('create', 'UA-75618295-1', 'auto');
+  // ga('send', 'pageview');
+  // translation method ------------------
+
+    var app = angular.module('Multilingual', [
+      'pascalprecht.translate',
+      'ngCookies'
+      ]);
+
+    app.config(['$translateProvider', function($translateProvider) {
+
+      $translateProvider
+          .useStaticFilesLoader({
+            prefix: 'assets/translations/locale-',
+            suffix: '.json'
+          })          
+      .useSanitizeValueStrategy('escape')
+      .preferredLanguage('en')
+      .useLocalStorage()
+      .useMissingTranslationHandlerLog();
+
+    }]);
+
+    app.run(['$rootScope', function($rootScope) {
+  $rootScope.lang = 'en';
+}])
+
+    app.controller('LanguageSwitchController', ['$scope', '$rootScope', '$translate',
+  function($scope, $rootScope, $translate) {
+    $scope.changeLanguage = function(langKey) {
+      $translate.use(langKey);
+    };
+
+    $rootScope.$on('$translateChangeSuccess', function(event, data) {
+      var language = data.language;
+
+      $rootScope.lang = language;
+    });
+}]);
+
 function initBionick() {	
     "use strict";
 	// window load  ------------------
@@ -171,6 +209,7 @@ function initBionick() {
     $(".fixed-wrap , .scroll-nav-holder").scrollToFixed({
         minWidth: 1036
     });
+    
 
     if ($("#timeLearning").length > 0) {
     var m = moment("2016-03-15")
@@ -259,7 +298,7 @@ function initBionick() {
     var bgi2 = $(".fbgs").data("bgscr");
     var bgt2 = $(".fbgs").data("bgtex");
     $(".bg-scroll").css("background-image", "url(" + bgi2 + ")");
-    $(".bg-title span").html(bgt2);
+    $(".bg-title span").attr("translate",bgt2);
     $(".scroll-nav  ul").singlePageNav({
         filter: ":not(.external)",
         updateHash: false,
@@ -272,7 +311,8 @@ function initBionick() {
                 var a = $(this).data("bgscr"),
                 b = $(this).data("bgtex");
                 $(".bg-scroll").css("background-image", "url(" + a + ")");
-                $(".bg-title span").html(b);
+                $(".bg-title span").attr("translate",b);
+
             });
         }
     });

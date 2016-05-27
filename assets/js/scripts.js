@@ -8,7 +8,7 @@
   // ga('create', 'UA-75618295-1', 'auto');
   // ga('send', 'pageview');
   // translation method ------------------
-
+var lang = (window.navigator.userLanguage || window.navigator.language).match(/pt.*/)? 'pt':'en';
     var app = angular.module('Multilingual', [
       'pascalprecht.translate',
       'ngCookies'
@@ -22,7 +22,7 @@
             suffix: '.json'
           })          
       .useSanitizeValueStrategy('escape')
-      .preferredLanguage('en')
+      .preferredLanguage(lang)
       .useLocalStorage()
       .useMissingTranslationHandlerLog();
 
@@ -45,7 +45,7 @@
     });
 }]);
 
-function initBionick() {	
+function initMySelf() {	
     "use strict";
 	// window load  ------------------
 	$(window).load(function() {
@@ -211,12 +211,17 @@ function initBionick() {
     });
     
 
-    if ($("#timeLearning").length > 0) {
+    if ($(".milestone-counter").length > 0) {
     var m = moment("2016-03-15")
     var today = moment().startOf('day');
     var days = Math.round((today - m) / 86400000);
-    document.getElementById("timeLearning").setAttribute('data-content',days);
-    document.getElementById("timeLearning").setAttribute('data-num', days);}
+    $('.milestone-counter .coffe').attr('data-content', days * 3);
+    $('.milestone-counter .coffe').attr('data-num', days * 3);
+    $('.milestone-counter .nightsAwake').attr('data-content', Math.floor(days/15));
+    $('.milestone-counter .nightsAwake').attr('data-num', Math.floor(days/15));
+    $('.milestone-counter .timeLearning').attr('data-content', days);
+    $('.milestone-counter .timeLearning').attr('data-num', days);
+}
 	// scroll animation ------------------
     $(window).scroll(function() {
         if ($(this).scrollTop() > 300) $("footer").addClass("visfooter"); else $("footer").removeClass("visfooter");
@@ -298,7 +303,7 @@ function initBionick() {
     var bgi2 = $(".fbgs").data("bgscr");
     var bgt2 = $(".fbgs").data("bgtex");
     $(".bg-scroll").css("background-image", "url(" + bgi2 + ")");
-    $(".bg-title span").attr("translate",bgt2);
+    $(".bg-title span").html($('#'+bgt2).html());
     $(".scroll-nav  ul").singlePageNav({
         filter: ":not(.external)",
         updateHash: false,
@@ -308,10 +313,11 @@ function initBionick() {
         currentClass: "act-link",
         onComplete: function() {
             if ($(".scroll-nav  a").hasClass("act-link")) $(".scroll-nav  a.act-link").each(function() {
-                var a = $(this).data("bgscr"),
-                b = $(this).data("bgtex");
+                var a = $(this).data("bgscr")
+                ,   b = $(this).data("bgtex");
                 $(".bg-scroll").css("background-image", "url(" + a + ")");
-                $(".bg-title span").attr("translate",b);
+                $(".bg-title span").html($('#'+b).html());
+
 
             });
         }
@@ -489,9 +495,9 @@ function initparallax() {
     if (trueMobile) {
 		$(".background-video").remove();
 		$('.grid-item-holder').attr("onclick","return true");		
-	}	 
+	}
 }
 $(document).ready(function() {
-    initBionick();
+    initMySelf();
     initparallax();
 });

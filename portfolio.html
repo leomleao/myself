@@ -1,25 +1,23 @@
 <!DOCTYPE HTML>
-<html lang="en">
-    
-<!-- Mirrored from bionick.kwst.net/site/portfolio2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Mar 2016 05:20:58 GMT -->
+<html lang="{{ lang }}" ng-app="Multilingual">
 <head>
         <!--=============== basic  ===============-->
         <meta charset="UTF-8">
-        <title>Portfolio - Leo Leao</title>
+        <title>LeoLeao | vCard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="robots" content="index, follow"/>
         <meta name="keywords" content=""/>
         <meta name="description" content=""/>
-        <!--=============== css  ===============-->	
-        <link type="text/css" rel="stylesheet" href="../assets/css/reset.css">
-        <link type="text/css" rel="stylesheet" href="../assets/css/plugins.css">
-        <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
-        <link type="text/css" rel="stylesheet" href="../assets/css/color.css">
+        <!--=============== css  ===============--> 
+        <link type="text/css" rel="stylesheet" href="assets/css/reset.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/plugins.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/color.css">
         <!--=============== favicons ===============-->
-        <link rel="shortcut icon" href="../assets/img/favicon.ico">
+        <link rel="shortcut icon" href="assets/img/favicon.ico">
     </head>
     <body>
-         <!--================= loader start ================-->
+        <!--================= loader start ================-->
          <div class="loader">
               <div class="electron one"></div>
               <div class="electron oni"></div>
@@ -29,27 +27,26 @@
         <!-- loader end -->
         <!--================= main start ================-->
         <div id="main">
-             <!--=============== header ===============-->  
+            <!--=============== header ===============-->   
             <header>                
                 <div class="logo-holder"><a href="index.html"><h3>Leo Leão<h3/></a></div>
-                 <div class="nav-lang">
-                    <ul>
-           <li><a href="pt/portfolio.html" ><img height="25" width="44"  src="../assets/img/brazilFlag.png" ></a></li>
-                                        
-            <li><a href="en/portfolio.html" ><img height="25" width="44" src="../assets/img/usFlag.png"></a></li>
-                                     
-                                   </ul> 
-                                </div>
+                    <div class="nav-lang">
+                        <div ng-controller="LanguageSwitchController">
+                            <a ng-show="lang == 'en'" ng-click="changeLanguage('pt')" ><img src="assets/img/brazilFlag.png" ></a>
+                                            
+                            <a ng-show="lang == 'pt'" ng-click="changeLanguage('en')"><img src="assets/img/usFlag.png"></a>
+                        </div> 
+                    </div>
                 <div class="nav-button">
-                    <span  class="nos"></span>
+                    <span class="nos"></span>
                     <span class="ncs"></span>
                     <span class="nbs"></span>
                 </div>
             </header>
             <!-- header  end -->
-            <!--=============== wrapper ===============-->	
+            <!--=============== wrapper ===============-->  
             <div id="wrapper">
-                <!--=============== content-holder ===============-->	
+                <!--=============== content-holder ===============-->   
                 <div class="content-holder scale-bg2">
                     <!--=============== navigation ===============-->
                     <div class="nav-inner isDown">
@@ -63,19 +60,19 @@
                                     <!-- General menu scroll navigation -->
                                     <ul>
                                         <li>
-                                            <a href="index.html#sec1" class="custom-scroll-link">About me</a>
+                                            <a href="index.html#sec1" class="custom-scroll-link" translate="ABOUT_ME"></a>
                                         </li>
                                         <li>
-                                            <a href="index.html#sec2" class="custom-scroll-link">Resume</a>
+                                            <a href="index.html#sec2" class="custom-scroll-link" translate="RESUME"></a>
                                         </li>
                                         <li>
-                                            <a href="index.html#sec3" class="custom-scroll-link">Services</a>
+                                            <a href="index.html#sec3" class="custom-scroll-link" translate="SERVICES"></a>
                                         </li>
                                         <li>
-                                            <a href="index.html#sec4" class="custom-scroll-link">Skills</a>
+                                            <a href="index.html#sec4" class="custom-scroll-link" translate="SKILLS"></a>
                                         </li>
                                         <li>
-                                            <a href="index.html#sec5" class="custom-scroll-link">Clients</a>
+                                            <a href="index.html#sec5" class="custom-scroll-link" translate="CLIENTS"></a>
                                         </li>
                                     </ul>
                                 </li>
@@ -91,18 +88,18 @@
                             <div class="filter-holder fixed-filter">
                                 <div class="gallery-filters">
                                     <ul>
-                                        <li><a href="index.html"><span>Go Back</span></a></li>
+                                        <li><a href="index.html"><span translate="GO_BACK"></span></a></li>
                                         <li>
-                                            <a href="#" class="gallery-filter gallery-filter-active"  data-filter="*"><span>All</span></a>	
+                                            <a href="#" class="gallery-filter gallery-filter-active"  data-filter="*" ><span translate="PORTFOLIO_FILTER_ALL"></span></a>	
                                         </li>
                                         <li>	
-                                            <a href="#" class="gallery-filter " data-filter=".web"><span>Web</span></a>
+                                            <a href="#" class="gallery-filter " data-filter=".web" ><span translate="PORTFOLIO_FILTER_WEB"></span></a>
                                         </li>
                                         <li>
-                                            <a href="#" class="gallery-filter" data-filter=".photoedit"><span>Photoedit</span></a>
+                                            <a href="#" class="gallery-filter" data-filter=".photoedit" ><span translate="PORTFOLIO_FILTER_PHOTO_EDIT"></span></a>
                                         </li>
                                         <li>
-                                            <a href="#" class="gallery-filter" data-filter=".photography"><span>Photography</span></a>
+                                            <a href="#" class="gallery-filter" data-filter=".photography" ><span translate="PORTFOLIO_FILTER_PHOTO"></span></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -112,14 +109,14 @@
                                 <!-- 1 -->
                                 <div class="gallery-item photography">
                                     <div class="grid-item-holder">
-                                        <a class="image-popup box-popup" href="../assets/img/bird.jpg"><i class="fa fa-expand"></i></a>
+                                        <a class="image-popup box-popup" href="assets/img/bird.jpg"><i class="fa fa-expand"></i></a>
                                         <div class="folio-img"> 
                                             <span class="overlay"></span> 
-                                            <img  src="../assets/img/bird.jpg"    alt="">
+                                            <img  src="assets/img/bird.jpg"    alt="">
                                         </div>
                                         <div class="grid-item">
-                                            <h3><a href="portfolio-single.html">Plush-Crested Jay</a></h3>
-                                            <span>Photography</span>
+                                            <h3><a href="portfolio-single.html" translate="PORTFOLIO_GALLERY_1"></a></h3>
+                                            <span translate="PORTFOLIO_FILTER_PHOTO"></span>
                                             <i class="fa fa-paw"></i>
                                         </div>
                                     </div>
@@ -128,14 +125,14 @@
                                 <!-- 2 -->
                                 <div class="gallery-item photography">
                                     <div class="grid-item-holder">
-                                        <a class="image-popup box-popup" href="../assets/img/beach.jpg"><i class="fa fa-expand"></i></a>
+                                        <a class="image-popup box-popup" href="assets/img/beach.jpg"><i class="fa fa-expand"></i></a>
                                         <div class="folio-img"> 
                                             <span class="overlay"></span> 
-                                            <img  src="../assets/img/beach.jpg"    alt="">
+                                            <img  src="assets/img/beach.jpg"    alt="">
                                         </div>
                                         <div class="grid-item">
-                                            <h3><a href="portfolio-single.html">Beach in Ubatuba - SP</a></h3>
-                                            <span>Photography</span>
+                                            <h3><a href="portfolio-single.html" translate="PORTFOLIO_GALLERY_2"></a></h3>
+                                            <span translate="PORTFOLIO_FILTER_PHOTO"></span>
                                             <i class="fa fa-camera-retro"></i>
                                         </div>
                                     </div>
@@ -144,14 +141,14 @@
                                 <!-- 3 -->
                                 <div class="gallery-item web">
                                     <div class="grid-item-holder">
-                                        <a class="image-popup box-popup" href="../assets/img/home.jpg"><i class="fa fa-expand"></i></a>
+                                        <a class="image-popup box-popup" href="assets/img/home.jpg"><i class="fa fa-expand"></i></a>
                                         <div class="folio-img"> 
                                             <span class="overlay"></span> 
-                                            <img  src="../assets/img/home.jpg"    alt="">
+                                            <img  src="assets/img/home.jpg"    alt="">
                                         </div>
                                         <div class="grid-item">
-                                            <h3><a href="portfolio-single.html"  >WoodWork company</a></h3>
-                                            <span>Web  Design</span>
+                                            <h3><a href="portfolio-single.html" translate="PORTFOLIO_GALLERY_3"></a></h3>
+                                            <span translate="PORTFOLIO_FILTER_WEB_DESIGN"></span>
                                             <i class="fa fa-laptop"></i>
                                         </div>
                                     </div>
@@ -160,14 +157,14 @@
                                 <!-- 4 -->
                                 <div class="gallery-item photography photoedit gallery-item-second">
                                     <div class="grid-item-holder">
-                                        <a class="image-popup box-popup" href="../assets/img/reflectingpool.jpg"><i class="fa fa-expand"></i></a>
+                                        <a class="image-popup box-popup" href="assets/img/reflectingpool.jpg"><i class="fa fa-expand"></i></a>
                                         <div class="folio-img"> 
                                             <span class="overlay"></span> 
-                                            <img  src="../assets/img/reflectingpool.jpg"    alt="">
+                                            <img  src="assets/img/reflectingpool.jpg"    alt="">
                                         </div>
                                         <div class="grid-item">
-                                            <h3><a href="portfolio-single.html"  >Reflecting Pool - D.C.</a></h3>
-                                            <span>Photography</span>
+                                            <h3><a href="portfolio-single.html" translate="PORTFOLIO_GALLERY_4"></a></h3>
+                                            <span translate="PORTFOLIO_FILTER_PHOTO" translate="PORTFOLIO_FILTER_PHOTO"></span>
                                             <i class="fa fa-camera-retro"></i>
                                         </div>
                                     </div>
@@ -176,14 +173,14 @@
                                 <!-- 5 -->
                                 <div class="gallery-item photography photedit">
                                     <div class="grid-item-holder">
-                                        <a class="image-popup box-popup" href="../assets/img/ny.jpg"><i class="fa fa-expand"></i></a>
+                                        <a class="image-popup box-popup" href="assets/img/ny.jpg"><i class="fa fa-expand"></i></a>
                                         <div class="folio-img"> 
                                             <span class="overlay"></span> 
-                                            <img  src="../assets/img/ny.jpg"    alt="">
+                                            <img  src="assets/img/ny.jpg"    alt="">
                                         </div>
                                         <div class="grid-item">
-                                            <h3><a href="portfolio-single.html"  >New York Street</a></h3>
-                                            <span>Photography</span>
+                                            <h3><a href="portfolio-single.html" translate="PORTFOLIO_GALLERY_5"></a></h3>
+                                            <span translate="PORTFOLIO_FILTER_PHOTO"></span>
                                             <i class="fa fa-camera-retro"></i>
                                         </div>
                                     </div>
@@ -192,14 +189,14 @@
                                 <!-- 6 -->
                                 <div class="gallery-item photography">
                                     <div class="grid-item-holder">
-                                        <a class="image-popup box-popup" href="../assets/img/einstein.jpg"><i class="fa fa-expand"></i></a>
+                                        <a class="image-popup box-popup" href="assets/img/einstein.jpg"><i class="fa fa-expand"></i></a>
                                         <div class="folio-img"> 
                                             <span class="overlay"></span> 
-                                            <img  src="../assets/img/einstein.jpg"    alt="">
+                                            <img  src="assets/img/einstein.jpg"alt="">
                                         </div>
                                         <div class="grid-item">
-                                            <h3><a href="portfolio-single.html"  >Einstein Monument</a></h3>
-                                            <span>Photography</span>
+                                            <h3><a href="portfolio-single.html" translate="PORTFOLIO_GALLERY_6"></a></h3>
+                                            <span translate="PORTFOLIO_FILTER_PHOTO"></span>
                                             <i class="fa  fa-puzzle-piece"></i>
                                         </div>
                                     </div>
@@ -208,14 +205,14 @@
                                 <!-- 7 -->
                                 <div class="gallery-item photography">
                                     <div class="grid-item-holder">
-                                        <a class="image-popup box-popup" href="../assets/img/waterfontainNY.jpg"><i class="fa fa-expand"></i></a>
+                                        <a class="image-popup box-popup" href="assets/img/waterfontainNY.jpg"><i class="fa fa-expand"></i></a>
                                         <div class="folio-img"> 
                                             <span class="overlay"></span> 
-                                            <img  src="../assets/img/waterfontainNY.jpg"    alt="">
+                                            <img  src="assets/img/waterfontainNY.jpg"    alt="">
                                         </div>
                                         <div class="grid-item">
-                                            <h3><a href="portfolio-single.html"  >New York</a></h3>
-                                            <span>Photography</span>
+                                            <h3><a href="portfolio-single.html" translate="PORTFOLIO_GALLERY_7"></a></h3>
+                                            <span translate="PORTFOLIO_FILTER_PHOTO"></span>
                                             <i class="fa fa-camera-retro"></i>
                                         </div>
                                     </div>
@@ -224,14 +221,14 @@
                                 <!-- 8 -->
                                 <div class="gallery-item photography photedit">
                                     <div class="grid-item-holder">
-                                        <a class="image-popup box-popup" href="../assets/img/watch.jpg"><i class="fa fa-expand"></i></a>
+                                        <a class="image-popup box-popup" href="assets/img/watch.jpg"><i class="fa fa-expand"></i></a>
                                         <div class="folio-img"> 
                                             <span class="overlay"></span> 
-                                            <img  src="../assets/img/watch.jpg"    alt="">
+                                            <img  src="assets/img/watch.jpg"    alt="">
                                         </div>
                                         <div class="grid-item">
-                                            <h3><a href="portfolio-single.html"  >Macro Pic - Watch</a></h3>
-                                            <span>Photography</span>
+                                            <h3><a href="portfolio-single.html" translate="PORTFOLIO_GALLERY_8"></a></h3>
+                                            <span translate="PORTFOLIO_FILTER_PHOTO"></span>
                                             <i class="fa fa-camera-retro"></i>
                                         </div>
                                     </div>
@@ -240,14 +237,14 @@
                                 <!-- 9 -->
                                 <div class="gallery-item photography photoedit">
                                     <div class="grid-item-holder">
-                                        <a class="image-popup box-popup" href="../assets/img/centralpark.jpg"><i class="fa fa-expand"></i></a>
+                                        <a class="image-popup box-popup" href="assets/img/centralpark.jpg"><i class="fa fa-expand"></i></a>
                                         <div class="folio-img"> 
                                             <span class="overlay"></span> 
-                                            <img  src="../assets/img/centralpark.jpg">
+                                            <img  src="assets/img/centralpark.jpg">
                                         </div>
                                         <div class="grid-item">
-                                            <h3><a href="portfolio-single.html"  >Central Park</a></h3>
-                                            <span>Photography</span>
+                                            <h3><a href="portfolio-single.html" translate="PORTFOLIO_GALLERY_9"></a></h3>
+                                            <span translate="PORTFOLIO_FILTER_PHOTO"></span>
                                             <i class="fa fa-camera-retro"></i>
                                         </div>
                                     </div>
@@ -256,14 +253,14 @@
                                 <!-- 10 -->
                                 <div class="gallery-item photography photoedit">
                                     <div class="grid-item-holder">
-                                        <a class="image-popup box-popup" href="../assets/img/wsstreet2.jpg"><i class="fa fa-expand"></i></a>
+                                        <a class="image-popup box-popup" href="assets/img/wsstreet2.jpg"><i class="fa fa-expand"></i></a>
                                         <div class="folio-img"> 
                                             <span class="overlay"></span> 
-                                            <img  src="../assets/img/wsstreet2.jpg"    alt="">
+                                            <img  src="assets/img/wsstreet2.jpg"    alt="">
                                         </div>
                                         <div class="grid-item">
-                                            <h3><a href="portfolio-single.html"  >Street in Washington D.C. </a></h3>
-                                            <span>Photography</span>
+                                            <h3><a href="portfolio-single.html" translate="PORTFOLIO_GALLERY_10"> </a></h3>
+                                            <span translate="PORTFOLIO_FILTER_PHOTO"></span>
                                             <i class="fa fa-camera-retro"></i>
                                         </div>
                                     </div>
@@ -272,14 +269,14 @@
                                 <!-- 11 -->
                                 <div class="gallery-item photography">
                                     <div class="grid-item-holder">
-                                        <a class="image-popup box-popup" href="../assets/img/waterfall.jpg"><i class="fa fa-expand"></i></a>
+                                        <a class="image-popup box-popup" href="assets/img/waterfall.jpg"><i class="fa fa-expand"></i></a>
                                         <div class="folio-img"> 
                                             <span class="overlay"></span> 
-                                            <img  src="../assets/img/waterfall.jpg"    alt="">
+                                            <img  src="assets/img/waterfall.jpg"    alt="">
                                         </div>
                                         <div class="grid-item">
-                                            <h3><a href="portfolio-single.html"  >Watefall in Definopolis - MG</a></h3>
-                                            <span>Photography</span>
+                                            <h3><a href="portfolio-single.html" translate="PORTFOLIO_GALLERY_11"></a></h3>
+                                            <span translate="PORTFOLIO_FILTER_PHOTO"></span>
                                             <i class="fa fa-camera-retro"></i>
                                         </div>
                                     </div>
@@ -288,14 +285,14 @@
                                 <!-- 12 -->
                                 <div class="gallery-item gallery-item-second photography">
                                     <div class="grid-item-holder">
-                                        <a class="image-popup box-popup" href="../assets/img/flower.jpg"><i class="fa fa-expand"></i></a>
+                                        <a class="image-popup box-popup" href="assets/img/flower.jpg"><i class="fa fa-expand"></i></a>
                                         <div class="folio-img"> 
                                             <span class="overlay"></span> 
-                                            <img  src="../assets/img/flower.jpg"   alt="">
+                                            <img  src="assets/img/flower.jpg"   alt="">
                                         </div>
                                         <div class="grid-item">
-                                            <h3><a href="portfolio-single.html"  >Macro Pic - Flower</a></h3>
-                                            <span>Photography</span>
+                                            <h3><a href="portfolio-single.html" translate="PORTFOLIO_GALLERY_12"></a></h3>
+                                            <span translate="PORTFOLIO_FILTER_PHOTO"></span>
                                             <i class="fa fa-camera-retro"></i>
                                         </div>
                                     </div>
@@ -304,14 +301,14 @@
                                 <!-- 13 -->
                                 <div class="gallery-item photography">
                                     <div class="grid-item-holder">
-                                        <a class="image-popup box-popup" href="../assets/img/drink.jpg"><i class="fa fa-expand"></i></a>
+                                        <a class="image-popup box-popup" href="assets/img/drink.jpg"><i class="fa fa-expand"></i></a>
                                         <div class="folio-img"> 
                                             <span class="overlay"></span> 
-                                            <img  src="../assets/img/drink.jpg"    alt="">
+                                            <img  src="assets/img/drink.jpg"    alt="">
                                         </div>
                                         <div class="grid-item">
-                                            <h3><a href="portfolio-single.html"  >Macro Pic - Drink</a></h3>
-                                            <span>Photography</span>
+                                            <h3><a href="portfolio-single.html" translate="PORTFOLIO_GALLERY_13"></a></h3>
+                                            <span translate="PORTFOLIO_FILTER_PHOTO"></span>
                                             <i class="fa fa-camera-retro"></i>
                                         </div>
                                     </div>
@@ -320,14 +317,14 @@
                                 <!-- 14 -->
                                 <div class="gallery-item photography photoedit">
                                     <div class="grid-item-holder">
-                                        <a class="image-popup box-popup" href="../assets/img/paraty.jpg"><i class="fa fa-expand"></i></a>
+                                        <a class="image-popup box-popup" href="assets/img/paraty.jpg"><i class="fa fa-expand"></i></a>
                                         <div class="folio-img"> 
                                             <span class="overlay"></span> 
-                                            <img  src="../assets/img/paraty.jpg"   alt="">
+                                            <img  src="assets/img/paraty.jpg"   alt="">
                                         </div>
                                         <div class="grid-item">
-                                            <h3><a href="portfolio-single.html"  >Building in Paraty - RJ</a></h3>
-                                            <span>Photography</span>
+                                            <h3><a href="portfolio-single.html" translate="PORTFOLIO_GALLERY_14"></a></h3>
+                                            <span translate="PORTFOLIO_FILTER_PHOTO"></span>
                                             <i class="fa fa-camera-retro"></i>
                                         </div>
                                     </div>
@@ -347,7 +344,7 @@
                                 <div class="col-md-4">
                                     <!-- footer social -->
                                     <div class="footer-info">
-                                        <h4>Find me</h4>
+                                        <h4 translate="FOOTER_FIND_ME"></h4>
                                         <div class="footer-social">
                                             <ul>
                                                 <li><a href="https://www.facebook.com/leomleao" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -361,11 +358,11 @@
                                 <div class="col-md-4">
                                     <!-- footer contacts -->
                                     <div class="footer-info">
-                                        <h4>Contact info</h4>
+                                        <h4 translate="FOOTER_CONTACT"></h4>
                                         <ul class="footer-contacts">
-                                            <li><a href="#" onclick="return false;"> <i class="fa fa-whatsapp"></i> +1(301)6840052</a></li>
+                                            <li><a  href="#" onclick="return false;"> <i class="fa fa-whatsapp"></i> +1(301)6840052</a></li>
                                             <li><a href="#" onclick="return false;" > <i class="fa fa-phone"></i> +55(11)998680977</a></li>
-                                            <li><a href="https://www.google.com.br/maps/@-23.1896366,-47.0467868,11z"><i class="fa fa-motorcycle"></i> Jundiai - SP Brazil</a></li>
+                                            <li><a href="https://www.google.com.br/maps/@-23.1896366,-47.0467868,11z"><i class="fa fa-motorcycle"></i> Jundiai - SP Brasil</a></li>
                                             <li><a href="mailto:leomleao@gmail.com"><i class="fa fa-envelope-o"></i> leomleao@gmail.com</a></li>
                                         </ul>
                                     </div>
@@ -373,7 +370,7 @@
                                 <div class="col-md-4">
                                     <!-- titter -->
                                     <div class="footer-info">
-                                        <h4>My Instagram</h4>
+                                        <h4 translate="FOOTER_INSTA"></h4>
                                         <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/5c74975ff6de2461333023f655fca9dfcd7a7e42.html" id="lightwidget_5c74975ff6" name="lightwidget_5c74975ff6"  scrolling="no" allowtransparency="true" class="lightwidget-widget" ></iframe>
                                     </div>
                                 </div>
@@ -382,7 +379,7 @@
                         <!--to top / privacy policy-->
                         <div class="to-top-holder copyright">
                             <div class="container">
-                                <p>Page 2016 Developed by <a href="http://leoleao.netau.net/">leomleao</a> | All rights reserved <i class="fa fa-copyright"></i></p>                               
+                                <p><span translate="FOOTER_PAGE_INFO"></span> <a href="http://leoleao.ml" translate="FOOTER_PAGE_AUTHOR" ></a><span translate="FOOTER_PAGE_COPYRIGHT"></span><i class="fa fa-copyright"></i></p>                               
                                 <div class="to-top"> <i class="fa fa-angle-double-up"></i></div>
                             </div>
                         </div>
@@ -394,9 +391,21 @@
             <!-- wrapper end -->
         </div>
         <!-- Main end -->
-        <!--=============== scripts  ===============-->
-        <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
-        <script type="text/javascript" src="../assets/js/plugins.js"></script>
-        <script type="text/javascript" src="../assets/js/scripts.js"></script>
+        <script type="text/javascript" src="assets/js/jquery/dist/jquery.min.js"></script>
+
+        <script type="text/javascript" src="assets/js/angular/angular.min.js"></script>
+
+
+
+        <script type="text/javascript" src="assets/js/angular-translate/angular-translate.js"></script>
+        <script type="text/javascript" src="assets/js/angular-translate-handler-log/angular-translate-handler-log.js"></script>
+
+        <script type="text/javascript" src="assets/js/angular-cookies/angular-cookies.js"></script>
+        <script type="text/javascript" src="assets/js/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+        <script type="text/javascript" src="assets/js/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+
+        <script type="text/javascript" src="assets/js/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+        <script type="text/javascript" src="assets/js/plugins.js"></script>
+        <script type="text/javascript" src="assets/js/scripts.js"></script>   
     </body>
 </html>

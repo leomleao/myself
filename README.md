@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="http://leoleao.ml"><img style="border-radius: 50%;" src="https://rawgit.com/leomleao/myself/dev/public/myself.jpg" alt="WAGO" width="250"></a>
+  <a href="http://leoleao.ml"><img src="https://rawgit.com/leomleao/myself/dev/public/myself.png" alt="WAGO" width="250"></a>
   <br>
       Resume page served as an APP
   <br>
@@ -16,7 +16,6 @@
 
 This project started as a weekend project when I started to get into HTML and WebDev in general. So much has change since then and now it's time for version 2.0
 
-<a href="https://www.buymeacoff.ee/yM2zt6U9F" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 <p align="center"> 
   <a href="#key-features">Key Features</a> •
@@ -24,6 +23,10 @@ This project started as a weekend project when I started to get into HTML and We
   <a href="#license">License</a>
 </p>
 
+<p align="center"> 
+    <a href="https://www.buymeacoff.ee/yM2zt6U9F" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" >
+    </a>
+</p>
 
 
 ## Key Features

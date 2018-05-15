@@ -42,19 +42,15 @@ This project started as a weekend project when I started to get into HTML and We
 ## Download
 
 
-You can [download](https://github.com/leomleao/myself).
+You can [download](https://github.com/leomleao/myself) this resume app if you want.
 
 
-
-## You may also like...
-
-Other stuff
 
 ## License
 
 MIT
 
-You might want to take a look on my resume [HERE](https://rawgit.com/leomleao/resume/master/ResumeEN.pdf) .
+You might want to take a look on my resume [HERE](https://rawgit.com/leomleao/resume/master/ResumeEN.pdf).
 
 ---
 

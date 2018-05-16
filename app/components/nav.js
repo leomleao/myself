@@ -7,7 +7,6 @@ class Nav extends Component {
 
     
   render() {
-    {this.props}
     return (
       <div className="nav-inner isDown">
         <div className="nav-decor nav-decor-tl" />
@@ -23,16 +22,16 @@ class Nav extends Component {
                   <a href="index.html#sec1" className="custom-scroll-link" translate="ABOUT_ME"> {this.props.locale.ABOUT_ME} </a>
                 </li>
                 <li>
-                  <a href="index.html#sec2" className="custom-scroll-link" translate="RESUME" />
+                  <a href="index.html#sec2" className="custom-scroll-link" translate="RESUME"> {this.props.locale.RESUME} </a>
                 </li>
                 <li>
-                  <a href="index.html#sec3" className="custom-scroll-link" translate="SERVICES" />
+                  <a href="index.html#sec3" className="custom-scroll-link" translate="SERVICES"> {this.props.locale.SERVICES} </a>
                 </li>
                 <li>
-                  <a href="index.html#sec4" className="custom-scroll-link" translate="SKILLS" />
+                  <a href="index.html#sec4" className="custom-scroll-link" translate="SKILLS"> {this.props.locale.SKILLS} </a>
                 </li>
                 <li>
-                  <a href="index.html#sec5" className="custom-scroll-link" translate="CLIENTS" />
+                  <a href="index.html#sec5" className="custom-scroll-link" translate="CLIENTS"> {this.props.locale.CLIENTS} </a>
                 </li>
               </ul>
             </li>

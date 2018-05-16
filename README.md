@@ -33,9 +33,12 @@ This project started as a weekend project when I started to get into HTML and We
 
 
 
-* Framework in Nodejs [Express 4](http://expressjs.com/).
-* Instead of static pages learn Reactjs and apply knowledge here.
-* Still to decide PAAS  deploy with Travis CI
+* Live translation with butto - I want to apply a cool transition and surely need to add help button, like "Hey, click here")
+* Instead of static pages learn Reactjs and apply knowledge here. - HALF DONE, It's so poorly applied, that it's almost embarassing :)
+* Still to decide PAAS  deploy with some CI
+* TODO Framework in Nodejs [Express 4](http://expressjs.com/).
+* TODO Add a cool resume area instead of just experiences.
+* TODO Decent portfolio page area!!!! This is probably where React will perform best.
 * TODO Maybe some integration with IOT devices just for the sake of it.
 
 

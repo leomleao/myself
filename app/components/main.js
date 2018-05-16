@@ -3,8 +3,14 @@
 import React, {Component} from 'react';
 import Header from './Header';
 import Nav from './Nav';
+import Rest from './Rest';
+import SubNav from './SubNav';
+import Background from './Background';
+import Footer from './Footer';
 import localeEn from '../translations/locale-en.json';
 import localePt from '../translations/locale-pt.json';
+
+
 
 class Main extends Component {
   
@@ -52,38 +58,20 @@ class Main extends Component {
         <div id="wrapper">
           <div className="content-holder scale-bg2">
             {/* <Nav/> */}
-            <Nav locale={this.locale} />  
-
-            <div className="nav-inner isDown">
-              <div className="nav-decor nav-decor-tl" />
-              <div className="nav-decor nav-decor-br" />
-              <div className="overlay" />
-              <nav>
-                <ul>
-                  <li className="subnav">
-                    <a href="index.html" className="curpage">Home</a>
-                    {/* General menu scroll navigation */}
-                    <ul>
-                      <li>
-                        <a href="index.html#sec1" className="custom-scroll-link" translate="ABOUT_ME"> {this.locale.ABOUT_ME} </a>
-                      </li>
-                      <li>
-                        <a href="index.html#sec2" className="custom-scroll-link" translate="RESUME"> {this.locale.RESUME } </a>
-                      </li>
-                      <li>
-                        <a href="index.html#sec3" className="custom-scroll-link" translate="SERVICES"> {this.locale.SERVICES } </a>
-                      </li>
-                      <li>
-                        <a href="index.html#sec4" className="custom-scroll-link" translate="SKILLS"> {this.locale.SKILLS } </a>
-                      </li>
-                      <li>
-                        <a href="index.html#sec5" className="custom-scroll-link" translate="CLIENTS"> {this.locale.CLIENTS } </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
+            <Nav locale={this.locale} />   
+            <SubNav locale={this.locale} />   
+            <Background locale={this.locale}/>  
+            <div className="fixed-column">
+                <div className="bg-wrapper">
+                    <div className="bg bg-scroll"></div>
+                    <div className="overlay"></div>
+                    <div className="bg-title"><span></span></div>
+                </div>
             </div>
+            <Rest locale={this.locale} />
+            <div className="height-emulator"></div>
+            <Footer locale={this.locale} />           
+
         </div>
       </div>
     </div>

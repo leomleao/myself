@@ -1,0 +1,452 @@
+---
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Resume and portfolio for Leo Leao, system analyst and web developer." />
+  <title>Leo Leao | vCard</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <canvas class="plum-canvas" aria-hidden="true"></canvas>
+
+  <div class="top-controls">
+    <button id="theme-btn" class="icon-btn" type="button" aria-label="Switch to light mode">
+      <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"/>
+        <line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+    <button id="lang-btn" class="language" type="button">
+      <img id="lang-flag" src="/img/brazilFlag.png" alt="" width="22" height="22" />
+      <span id="lang-label">PT</span>
+    </button>
+  </div>
+
+  <main id="top">
+
+    <!-- ── Hero ── -->
+    <section class="profile-section">
+      <a class="avatar-link" href="#top" aria-label="Leo Leao home">
+        <img class="avatar" src="/img/mySelf.jpg" alt="Leo Leao" width="112" height="112" />
+      </a>
+
+      <svg class="name-signature" viewBox="0 0 804 325" aria-label="Leonardo M. Leão" role="img">
+        <g>
+          <path id="l" class="sig-path" d="M153.494 125.481C153.494 125.481 124.263 175.302 116.051 189.113C103.666 209.942 99.231 221.206 76.3919 260.898C80.2988 252.537 83.909 247.453 83.4743 239.234C82.9125 228.61 74.5348 224.028 68.0904 222.231C47.7974 216.571 33.1415 219.321 11.7638 217.892C155.437 215.245 155.437 215.245 299.11 212.598"/>
+          <path id="eonardo" class="sig-path" d="M126.92 198.431C136.114 197.6 147.317 193.527 153.836 190.106C155.759 189.097 161.5 186.748 160.552 184.943C157.631 179.39 142.364 190.032 146.498 195.967C150.612 201.872 165.589 191.367 171.306 189.441C172.848 188.921 177.388 186.173 177.388 186.173C177.388 186.173 168.676 193.506 172.648 195.876C176.412 198.121 181.898 191.176 183.461 189.734C185.023 188.292 185.205 185.036 185.205 185.036C185.205 185.036 186.194 186.501 190.059 186.616C193.924 186.731 201.176 185.587 201.18 185.591C201.706 186.113 193.549 196.585 196.839 197.73C197.886 198.095 211.435 185.663 213.874 185.655C217.531 185.642 204.816 198.59 216.39 194.587C223.424 192.154 225.338 190.424 232.486 186.771C232.675 186.674 236.994 183.92 240.65 182.885C243.182 182.168 244.685 182.714 244.584 182.837C243.913 183.656 242.08 183.516 239.875 184.694C235.496 187.032 230.85 191.332 232.603 193.697C234.049 195.649 239.51 193.036 243.603 189.908C246.302 187.845 248.391 185.03 248.391 185.03C248.391 185.03 247.006 187.6 246.84 189.937C246.68 192.211 246.575 192.288 249.445 193.973C253.204 196.179 266.312 186.336 268.466 184.404C269.248 183.703 272.043 191.274 278.79 185.378C279.179 185.039 272.239 192.322 275.707 194.269C280.027 196.693 284.35 191.703 287.184 190.395C289.849 189.165 292.426 188.046 295.574 185.915C301.351 182.004 306.284 183.233 306.284 183.233C306.284 183.233 301.488 183.181 299.154 185.971C294.946 191.001 295.25 193.983 297.705 194.588C304.478 196.258 311.645 186.99 317.307 182.917C325.542 176.994 342.588 158.916 342.588 158.916L353.715 145.432C353.715 145.432 346.808 154.358 346.02 155.349C340.095 162.806 326.952 176.714 327.269 188.987C327.439 195.559 333.206 191.829 336.525 189.844C337.176 189.455 339.85 187.877 343.028 185.182C346.402 182.32 350.369 182.926 350.844 183.376C351.428 183.929 348.799 183.96 346.694 186.217C344.08 189.022 344.842 192.254 348.179 193.576C349.799 194.217 354.175 192.069 356.825 189.152C358.98 186.78 359.636 183.774 359.631 182.373"/>
+          <path id="ml" class="sig-path" d="M658.17 205.8C542.276 205.799 426.415 209.86 310.559 212.852C322.343 213.554 334.257 213.072 345.91 214.957C351.907 215.927 357.597 218.522 362.981 221.334C375.446 227.844 371.051 243.559 370.222 254.023C409.506 186.905 409.506 186.905 448.79 119.787C440.315 139.709 429.86 160.053 429.134 181.691C428.974 186.443 438.037 184.545 447.668 175.52C460.222 163.754 471.425 150.627 483.304 138.18C474.988 154.947 463.822 171.243 461.129 189.765C467.416 192.434 474.963 186.526 480.1 182.025C490.263 173.121 500.199 163.879 509.162 153.769C530.534 129.662 547.742 102.088 565.053 74.9173C528.314 138.247 489.093 200.467 458.495 266.981C459.649 260.836 461.683 254.793 461.955 248.546C463.057 223.322 420.087 220.742 405.553 219.382C557.113 216.825 557.113 216.825 708.672 214.268"/>
+          <path id="leao" class="sig-path" d="M516.819 190.481C522.763 188.581 540.897 183.78 541.016 177.425C541.174 169.005 520.729 183.14 527.26 188.094C536.506 195.108 554.566 179.218 566.133 175.67C570.536 174.32 574.383 175.451 574.383 175.451C574.383 175.451 572.923 175.719 567.148 177.599C561.904 179.307 555.657 183.176 559.279 187.983C561.952 191.532 572.248 184.864 577.134 182.546C577.48 182.383 583.212 179.147 583.212 179.147C583.212 179.147 575.847 188.53 580.02 188.541C584.063 188.552 589.945 186.353 594.841 183.765C597.43 182.396 605.168 178.228 605.168 178.228C605.168 178.228 603.265 180.216 602.778 181.582C599.529 190.702 604.756 188.914 609.869 185.607C613.262 183.413 614.243 180.3 613.605 177.016C615.714 178.371 614.462 177.652 617.042 180.118C618.81 181.808 626.885 182.08 629.571 182.094C641.477 182.154 652.398 180.696 664.067 179.939C697.522 177.766 731.84 168.926 762.019 172.728C777.55 174.685 780.455 175.52 787.326 181.391"/>
+          <path id="til" class="sig-path" d="M567.633 165.363C566.164 163.341 568.714 167.943 572.841 167.258C577.468 166.49 585.974 162.988 590.993 166.801"/>
+          <path id="lasttil" class="sig-path" d="M730.195 207.224C726.214 208.227 725.427 213.423 731.364 212.873C744.338 211.672 749.044 209.321 758.91 208.703C767.78 208.148 769.55 209.195 771.665 213.29"/>
+          <circle id="dot" class="sig-dot" cx="783.7" cy="211.7" r="4"/>
+        </g>
+      </svg>
+
+      <p class="profile-eyebrow" data-i18n="eyebrow">System Analyst &amp; Web Developer</p>
+      <p class="profile-subtitle" data-i18n="subtitle">I build things for the web — and fix them when they break.</p>
+      <p class="profile-location" data-i18n="location">From Brazil, open to remote work</p>
+      <div class="actions">
+        <a class="button primary" href="#experience" data-i18n="ctaPrimary">View experience</a>
+        <a class="button secondary" href="#contact" data-i18n="ctaSecondary">Get in touch</a>
+      </div>
+      <nav class="profile-nav" aria-label="Main navigation">
+        <a href="#about" data-i18n="nav0">About</a>
+        <a href="#experience" data-i18n="nav1">Experience</a>
+        <a href="#services" data-i18n="nav2">Services</a>
+        <a href="#skills" data-i18n="nav3">Skills</a>
+        <a href="#contact" data-i18n="nav4">Contact</a>
+      </nav>
+    </section>
+
+    <!-- ── About ── -->
+    <section id="about" class="section two-column">
+      <div>
+        <p class="section-label">01</p>
+        <h2 data-i18n="aboutTitle">About</h2>
+        <p data-i18n="aboutBody">I started learning IT early and kept going through college, support roles, and self-directed web projects. I like communication-heavy work: understanding what people need, turning messy processes into usable systems, and making technical ideas easier to act on.</p>
+      </div>
+      <div class="portrait-wrap">
+        <img src="/img/mySelf.jpg" alt="Leo Leao" />
+      </div>
+    </section>
+
+    <section class="facts" aria-label="Quick facts">
+      <!-- rendered by JS -->
+    </section>
+
+    <!-- ── Experience ── -->
+    <section id="experience" class="section">
+      <p class="section-label">02</p>
+      <h2 data-i18n="experienceTitle">Experience</h2>
+      <div class="timeline">
+        <!-- rendered by JS -->
+      </div>
+    </section>
+
+    <!-- ── Services ── -->
+    <section id="services" class="section muted">
+      <p class="section-label">03</p>
+      <h2 data-i18n="servicesTitle">Services</h2>
+      <div class="service-grid">
+        <!-- rendered by JS -->
+      </div>
+    </section>
+
+    <!-- ── Skills ── -->
+    <section id="skills" class="section">
+      <p class="section-label">04</p>
+      <h2 data-i18n="skillsTitle">Skills</h2>
+      <div class="skills">
+        <!-- rendered by JS -->
+      </div>
+    </section>
+
+    <!-- ── Contact ── -->
+    <section id="contact" class="section muted">
+      <p class="section-label">05</p>
+      <h2 data-i18n="contactTitle">Contact</h2>
+      <p data-i18n="contactBody">Available for remote web and IT projects. Feel free to reach out.</p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/leaoleo" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/leomleao" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+        <a href="mailto:leomleao@gmail.com">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Email
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/leaoleo" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://github.com/leomleao" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
+      <a href="mailto:leomleao@gmail.com" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      </a>
+    </div>
+    <p>
+      &copy; <span id="year"></span>
+      <strong><a href="#top">Leo Leao</a></strong>.
+      <span data-i18n="footerRights">All rights reserved.</span>
+    </p>
+  </footer>
+
+  <script>
+    // ── i18n copy ─────────────────────────────────────────────────────────────
+    const copy = {
+      en: {
+        eyebrow: 'System Analyst & Web Developer',
+        subtitle: 'I build things for the web — and fix them when they break.',
+        location: 'From Brazil, open to remote work',
+        ctaPrimary: 'View experience',
+        ctaSecondary: 'Get in touch',
+        nav0: 'About', nav1: 'Experience', nav2: 'Services', nav3: 'Skills', nav4: 'Contact',
+        aboutTitle: 'About',
+        aboutBody: 'I started learning IT early and kept going through college, support roles, and self-directed web projects. I like communication-heavy work: understanding what people need, turning messy processes into usable systems, and making technical ideas easier to act on.',
+        facts: [
+          ['2015–2016', 'IT analyst intern experience'],
+          ['Web', 'Design and development projects'],
+          ['Remote', 'Interested in distributed teams'],
+        ],
+        experienceTitle: 'Experience',
+        experience: [
+          {
+            period: '2015–2016',
+            title: 'Support / IT Analyst Intern',
+            org: 'WAGO Kontakttechnik',
+            points: [
+              'Identified internal client needs and developed custom technical solutions.',
+              'Maintained systems for data warehouse and business intelligence initiatives.',
+              'Processed data with Excel, Access, and SQL.',
+              'Provided first-line technical support and coordinated with external specialists.',
+            ],
+          },
+          {
+            period: '2014–2017',
+            title: 'Systems Analysis and Development',
+            org: 'University studies',
+            points: [
+              'Focused on programming fundamentals, Java, systems analysis, and applied development.',
+              'Built self-directed web and design projects alongside coursework.',
+            ],
+          },
+        ],
+        servicesTitle: 'Services',
+        services: [
+          ['Web Design', 'Responsive websites and polished visual interfaces.'],
+          ['Development', 'Practical front-end implementation and maintainable UI code.'],
+        ],
+        skillsTitle: 'Skills',
+        skills: [
+          ['HTML / CSS', 80],
+          ['JavaScript', 65],
+          ['React', 60],
+          ['Java', 50],
+        ],
+        contactTitle: 'Contact',
+        contactBody: 'Available for remote web and IT projects. Feel free to reach out.',
+        footerRights: 'All rights reserved.',
+      },
+      pt: {
+        eyebrow: 'Analista de Sistemas & Desenvolvedor Web',
+        subtitle: 'Construo coisas para a web — e conserto quando quebram.',
+        location: 'Do Brasil, aberto a trabalho remoto',
+        ctaPrimary: 'Ver experiencia',
+        ctaSecondary: 'Entrar em contato',
+        nav0: 'Sobre', nav1: 'Experiencia', nav2: 'Servicos', nav3: 'Skills', nav4: 'Contato',
+        aboutTitle: 'Sobre',
+        aboutBody: 'Comecei a aprender TI cedo e continuei na faculdade, em funcoes de suporte e em projetos web proprios. Gosto de trabalhos com comunicacao: entender necessidades, transformar processos confusos em sistemas usaveis e tornar ideias tecnicas mais claras.',
+        facts: [
+          ['2015–2016', 'Experiencia como analista de TI'],
+          ['Web', 'Projetos de design e desenvolvimento'],
+          ['Remoto', 'Interesse em times distribuidos'],
+        ],
+        experienceTitle: 'Experiencia',
+        experience: [
+          {
+            period: '2015–2016',
+            title: 'Estagiario de Suporte / Analista de TI',
+            org: 'WAGO Kontakttechnik',
+            points: [
+              'Identifiquei necessidades internas e desenvolvi solucoes tecnicas customizadas.',
+              'Mantive sistemas para data warehouse e iniciativas de business intelligence.',
+              'Processei dados com Excel, Access e SQL.',
+              'Prestei suporte tecnico de primeiro nivel e coordenei com especialistas externos.',
+            ],
+          },
+          {
+            period: '2014–2017',
+            title: 'Analise e Desenvolvimento de Sistemas',
+            org: 'Faculdade',
+            points: [
+              'Foco em fundamentos de programacao, Java, analise de sistemas e desenvolvimento aplicado.',
+              'Projetos proprios de web e design em paralelo aos estudos.',
+            ],
+          },
+        ],
+        servicesTitle: 'Servicos',
+        services: [
+          ['Web Design', 'Sites responsivos e interfaces visuais bem cuidadas.'],
+          ['Desenvolvimento', 'Implementacao front-end pratica e codigo de UI facil de manter.'],
+        ],
+        skillsTitle: 'Skills',
+        skills: [
+          ['HTML / CSS', 80],
+          ['JavaScript', 65],
+          ['React', 60],
+          ['Java', 50],
+        ],
+        contactTitle: 'Contato',
+        contactBody: 'Disponivel para projetos remotos de web e TI. Entre em contato.',
+        footerRights: 'Todos os direitos reservados.',
+      },
+    };
+
+    // ── State ─────────────────────────────────────────────────────────────────
+    let lang = 'en';
+    let dark = localStorage.getItem('theme') !== 'light';
+
+    // ── Theme ─────────────────────────────────────────────────────────────────
+    const themeBtn  = document.getElementById('theme-btn');
+    const sunIcon   = document.getElementById('sun-icon');
+    const moonIcon  = document.getElementById('moon-icon');
+
+    function applyTheme() {
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      sunIcon.style.display  = dark ? '' : 'none';
+      moonIcon.style.display = dark ? 'none' : '';
+      themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+
+    themeBtn.addEventListener('click', () => {
+      dark = !dark;
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+      applyTheme();
+      restartPlum();
+    });
+
+    // ── Language ──────────────────────────────────────────────────────────────
+    const langBtn   = document.getElementById('lang-btn');
+    const langFlag  = document.getElementById('lang-flag');
+    const langLabel = document.getElementById('lang-label');
+
+    function applyLang() {
+      const t = copy[lang];
+      document.documentElement.lang = lang;
+
+      // Simple key swaps
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (typeof t[key] === 'string') el.textContent = t[key];
+      });
+
+      // Facts
+      document.querySelector('.facts').innerHTML = t.facts
+        .map(([val, label]) => `<div><strong>${val}</strong><span>${label}</span></div>`)
+        .join('');
+
+      // Timeline
+      document.querySelector('.timeline').innerHTML = t.experience
+        .map(item => `
+          <article class="timeline-item">
+            <time>${item.period}</time>
+            <div>
+              <h3>${item.title}</h3>
+              <p class="org">${item.org}</p>
+              <ul>${item.points.map(p => `<li>${p}</li>`).join('')}</ul>
+            </div>
+          </article>`)
+        .join('');
+
+      // Services
+      document.querySelector('.service-grid').innerHTML = t.services
+        .map(([title, body]) => `<article><h3>${title}</h3><p>${body}</p></article>`)
+        .join('');
+
+      // Skills
+      document.querySelector('.skills').innerHTML = t.skills
+        .map(([skill, value]) => `
+          <div class="skill">
+            <div><span>${skill}</span><strong>${value}%</strong></div>
+            <meter min="0" max="100" value="${value}">${value}%</meter>
+          </div>`)
+        .join('');
+
+      // Lang button
+      langFlag.src = lang === 'en' ? '/img/brazilFlag.png' : '/img/usFlag.png';
+      langLabel.textContent = lang === 'en' ? 'PT' : 'EN';
+    }
+
+    langBtn.addEventListener('click', () => {
+      lang = lang === 'en' ? 'pt' : 'en';
+      applyLang();
+    });
+
+    // ── Footer year ───────────────────────────────────────────────────────────
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ── Plum canvas ───────────────────────────────────────────────────────────
+    let plumRunning = false;
+    let plumRaf = 0;
+
+    function restartPlum() {
+      plumRunning = false;
+      cancelAnimationFrame(plumRaf);
+      runPlum();
+    }
+
+    function runPlum() {
+      const canvas = document.querySelector('.plum-canvas');
+      if (!canvas) return;
+
+      const ctx  = canvas.getContext('2d');
+      const dpr  = window.devicePixelRatio || 1;
+      let W, H;
+
+      function setup() {
+        W = window.innerWidth;
+        H = window.innerHeight;
+        canvas.width  = W * dpr;
+        canvas.height = H * dpr;
+        canvas.style.width  = W + 'px';
+        canvas.style.height = H + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.lineWidth   = 1;
+        ctx.strokeStyle = document.documentElement.dataset.theme === 'dark' ? '#ffffff18' : '#88888825';
+      }
+
+      const SPREAD   = Math.PI / 6;
+      const FRAME_MS = 25;
+
+      let qCur = [], qNext = [], lastTime = 0;
+
+      function branch(x, y, angle, counter) {
+        counter.n++;
+        const len = 6 * Math.random();
+        const x2  = x + len * Math.cos(angle);
+        const y2  = y + len * Math.sin(angle);
+        ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x2, y2); ctx.stroke();
+        if (x2 < -100 || x2 > W + 100 || y2 < -100 || y2 > H + 100) return;
+        const prob = counter.n <= 30 ? 0.8 : 0.5;
+        if (Math.random() < prob) qNext.push(() => branch(x2, y2, angle + Math.random() * SPREAD, counter));
+        if (Math.random() < prob) qNext.push(() => branch(x2, y2, angle - Math.random() * SPREAD, counter));
+      }
+
+      function rnd() { return Math.random() * 0.6 + 0.2; }
+
+      function start() {
+        ctx.clearRect(0, 0, W, H);
+        qCur  = [];
+        qNext = [
+          () => branch(rnd() * W, -5,     Math.PI / 2,  { n: 0 }),
+          () => branch(rnd() * W, H + 5, -Math.PI / 2,  { n: 0 }),
+          () => branch(-5,     rnd() * H, 0,             { n: 0 }),
+          () => branch(W + 5,  rnd() * H, Math.PI,       { n: 0 }),
+        ];
+        if (W < 500) qNext = qNext.slice(0, 2);
+        plumRunning = true;
+        lastTime    = 0;
+        plumRaf     = requestAnimationFrame(frame);
+      }
+
+      function frame(now) {
+        if (!plumRunning) return;
+        plumRaf = requestAnimationFrame(frame);
+        if (now - lastTime < FRAME_MS) return;
+        lastTime = now;
+        qCur  = qNext;
+        qNext = [];
+        if (!qCur.length) { plumRunning = false; return; }
+        qCur.forEach(fn => Math.random() < 0.5 ? qNext.push(fn) : fn());
+      }
+
+      setup();
+      start();
+
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          plumRunning = false;
+          cancelAnimationFrame(plumRaf);
+          setup();
+          start();
+        }, 200);
+      });
+    }
+
+    // ── Init ──────────────────────────────────────────────────────────────────
+    applyTheme();
+    applyLang();
+    runPlum();
+  </script>
+
+</body>
+</html>

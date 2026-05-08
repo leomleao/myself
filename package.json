@@ -1,13 +1,13 @@
 {
   "name": "myself",
-  "version": "2.0.0",
-  "description": "This project started as a weekend project when I started to get into HTML and WebDev in general. So much has change since then and now it's time for version 2.0",
+  "version": "3.0.0",
+  "description": "Personal site and vCard for Leo Leao",
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
-    "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0",
+    "dev": "astro dev --host",
+    "build": "astro build",
+    "preview": "astro preview",
     "start": "npm run dev"
   },
   "repository": {
@@ -16,16 +16,7 @@
   },
   "author": "Leo Leao",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/leomleao/myself/issues"
-  },
-  "homepage": "https://github.com/leomleao/myself#readme",
   "dependencies": {
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^5.1.1",
-    "vite": "^7.3.0"
+    "astro": "^5.0.0"
   }
 }

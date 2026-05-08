@@ -15,14 +15,14 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --ink: #e2ddd6;
-  --muted: #8a939e;
-  --paper: #0f1117;
-  --surface: #181c25;
-  --line: #272d3a;
-  --accent: #1fada1;
-  --accent-dark: #2ec8bb;
-  --rust: #e87b52;
+  --ink: #d7d5d3;
+  --muted: #868686;
+  --paper: #000000;
+  --surface: #111111;
+  --line: rgb(44, 45, 45);
+  --accent: #fd7e14;
+  --accent-dark: #ff922b;
+  --rust: #fd7e14;
 }
 
 /* ── Reset ── */
@@ -139,6 +139,7 @@ main {
 
 .sig-dot {
   fill: var(--ink);
+  opacity: 0;
 }
 
 .sig-path {
@@ -150,15 +151,30 @@ main {
   stroke-miterlimit: 10;
   stroke-dasharray: 4000;
   stroke-dashoffset: 4000;
-  animation: grow 15s ease-in-out infinite;
-  animation-delay: 0s;
 }
 
-@keyframes grow {
+/* Two shared keyframes — smooth easing, no hard waits */
+@keyframes sig-draw {
   0%   { stroke-dashoffset: 4000; }
-  80%  { stroke-dashoffset: 0; }
+  60%  { stroke-dashoffset: 0; }
   100% { stroke-dashoffset: 0; }
 }
+
+@keyframes sig-dot-pop {
+  0%   { opacity: 0; }
+  8%   { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+/* Staggered delays — nudge these to adjust overlap between strokes */
+#l        { animation: sig-draw    10s ease-in-out 0s    1 normal forwards; }
+#eonardo  { animation: sig-draw    10s ease-in-out 1.7s  1 normal forwards; }
+#m        { animation: sig-draw    10s ease-in-out 3s    1 normal forwards; }
+#firstdot { animation: sig-dot-pop 10s ease-in-out 3.3s  1 normal forwards; }
+#leao     { animation: sig-draw    10s ease-in-out 4s    1 normal forwards; }
+#til      { animation: sig-draw    10s ease-in-out 5.3s  1 normal forwards; }
+#lasttil  { animation: sig-draw    10s ease-in-out 5.1s  1 normal forwards; }
+#lastdot  { animation: sig-dot-pop 10s ease-in-out 5.3s  1 normal forwards; }
 
 .profile-eyebrow {
   margin: 0 0 12px;
@@ -316,8 +332,8 @@ p, li { line-height: 1.7; }
   background: rgba(255, 255, 255, .62);
 }
 [data-theme="dark"] .service-grid article {
-  border-color: rgba(255,255,255,.08);
-  background: rgba(255,255,255,.04);
+  border-color: var(--line);
+  background: var(--surface);
 }
 
 /* ── Skills ── */
@@ -364,9 +380,75 @@ meter::-webkit-meter-optimum-value { background: var(--accent); border-radius: 9
   font-weight: 800;
 }
 
-/* ── Contact ── */
-.contact { min-height: 60vh; }
-.contact-links a { color: var(--accent-dark); }
+/* ── Footer ── */
+.site-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px clamp(18px, 6vw, 86px);
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-social a {
+  display: inline-flex;
+  color: var(--muted);
+  transition: color 0.15s;
+}
+.footer-social a:hover { color: var(--ink); }
+
+.site-footer p {
+  margin: 0;
+  font-size: .82rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.site-footer p a { color: var(--ink); font-weight: 700; }
+.site-footer p a:hover { color: var(--accent); }
+
+/* Tooltip */
+.footer-tooltip-wrap {
+  position: relative;
+  display: inline;
+}
+.footer-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  bottom: calc(100% + 8px);
+  right: 0;
+  min-width: 200px;
+  max-width: 280px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.5;
+  white-space: normal;
+  transition: opacity 0.15s;
+  z-index: 30;
+}
+.footer-tooltip-wrap:hover .footer-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 520px) {
+  .site-footer { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .footer-tooltip { right: auto; left: 0; }
+}
 
 /* ── Responsive ── */
 @media (max-width: 860px) {

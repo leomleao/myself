@@ -57,19 +57,19 @@ import '../styles/global.css';
         </g>
       </svg>
 
-      <p class="profile-eyebrow" data-i18n="eyebrow">System Analyst &amp; Web Developer</p>
-      <p class="profile-subtitle" data-i18n="subtitle">I build things for the web — and fix them when they break.</p>
-      <p class="profile-location" data-i18n="location">From Brazil, open to remote work</p>
+      <p class="profile-eyebrow" data-i18n="eyebrow">SAP AMS Consultant · Developer · AI Engineer</p>
+      <p class="profile-subtitle" data-i18n="subtitle">Where enterprise process meets production engineering — amplified by AI.</p>
+      <p class="profile-location" data-i18n="location">Edinburgh, Scotland</p>
       <div class="actions">
         <a class="button primary" href="#experience" data-i18n="ctaPrimary">View experience</a>
         <a class="button secondary" href="#contact" data-i18n="ctaSecondary">Get in touch</a>
       </div>
       <nav class="profile-nav" aria-label="Main navigation">
-        <a href="#about" data-i18n="nav0">About</a>
+        <a href="#about"      data-i18n="nav0">About</a>
         <a href="#experience" data-i18n="nav1">Experience</a>
-        <a href="#services" data-i18n="nav2">Services</a>
-        <a href="#skills" data-i18n="nav3">Skills</a>
-        <a href="#contact" data-i18n="nav4">Contact</a>
+        <a href="#services"   data-i18n="nav2">Services</a>
+        <a href="#skills"     data-i18n="nav3">Skills</a>
+        <a href="#contact"    data-i18n="nav4">Contact</a>
       </nav>
     </section>
 
@@ -78,10 +78,11 @@ import '../styles/global.css';
       <div>
         <p class="section-label">01</p>
         <h2 data-i18n="aboutTitle">About</h2>
-        <p data-i18n="aboutBody">I started learning IT early and kept going through college, support roles, and self-directed web projects. I like communication-heavy work: understanding what people need, turning messy processes into usable systems, and making technical ideas easier to act on.</p>
+        <p class="about-lead" data-i18n="aboutLead"></p>
+        <p data-i18n="aboutBody"></p>
       </div>
       <div class="portrait-wrap">
-        <img src="/img/mySelf.jpg" alt="Leo Leao" />
+        <img src="/img/leo-profile.jpg" alt="Leonardo Leão" />
       </div>
     </section>
 
@@ -120,21 +121,21 @@ import '../styles/global.css';
     <section id="contact" class="section muted">
       <p class="section-label">05</p>
       <h2 data-i18n="contactTitle">Contact</h2>
-      <p data-i18n="contactBody">Available for remote web and IT projects. Feel free to reach out.</p>
-      <div class="contact-links">
-        <a href="https://www.linkedin.com/in/leaoleo" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          LinkedIn
-        </a>
-        <a href="https://github.com/leomleao" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          GitHub
-        </a>
-        <a href="mailto:leomleao@gmail.com">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          Email
-        </a>
-      </div>
+      <p data-i18n="contactBody">Open to SAP consulting, AI engineering, advisory and fractional roles. Based in Edinburgh, available remotely worldwide.</p>
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <input type="text"  id="cf-name"  data-i18n-ph="cfName"  placeholder="Your name"  required autocomplete="name" />
+          <input type="email" id="cf-email" data-i18n-ph="cfEmail" placeholder="Your email" required autocomplete="email" />
+        </div>
+        <textarea id="cf-msg" data-i18n-ph="cfMsg" rows="5" placeholder="Your message" required></textarea>
+        <div class="form-footer">
+          <button type="submit" class="button primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span data-i18n="cfSubmit">Send message</span>
+          </button>
+          <p id="cf-status" class="cf-status" aria-live="polite"></p>
+        </div>
+      </form>
     </section>
 
   </main>
@@ -158,113 +159,296 @@ import '../styles/global.css';
     </p>
   </footer>
 
+  <div id="skill-tip" role="tooltip" aria-hidden="true">
+    <strong id="skill-tip-name"></strong>
+    <p id="skill-tip-body"></p>
+  </div>
+
   <script>
+    // ── Skill proof index ─────────────────────────────────────────────────────
+    const skillProofs = {
+      // SAP & Business
+      'SAP ECC':         'Delivered ECC implementations and AMS support across multiple clients. At WAGO UK, led the full ECC implementation from functional design through go-live.',
+      'SAP S/4HANA':     'Led the S/4HANA transition at WAGO UK, managing the full migration from ECC. Currently supporting S/4HANA clients at The Config Team in wholesale and production.',
+      'SAP SD':          'Primary module across all roles. Designed order-to-cash flows, EDI integrations and sales automation at WAGO. Supporting 12+ SD clients at The Config Team.',
+      'SAP MM':          'Configured procurement workflows at WAGO UK and Brazil. Supporting MM clients across construction and beverages industries at The Config Team.',
+      'SAP PP':          'Part of the full ERP rollout at WAGO Brazil and subsequent UK implementation. Currently supporting PP clients in production environments.',
+      'SAP LE':          'Implemented logistics execution and WMS modules at WAGO Brazil. Supported LE processes in integration with SD for order fulfilment workflows.',
+      'SAP FICO':        'Configured and supported FICO processes across multiple implementations. Regular FICO incident resolution and change delivery at The Config Team.',
+      'ITIL':            'AMS delivery aligned with ITIL at The Config Team — managing incidents, service requests and changes within defined SLA and escalation procedures.',
+      'AMS':             'Managing Application Management Services for 12+ clients at The Config Team, handling the full AMS lifecycle from ticket logging to resolution and review.',
+      'SLA Management':  'Responsible for SLA commitments across 12+ clients. Prioritises and escalates tickets in line with agreed response and resolution time targets.',
+      'Functional Specs':'Regularly writes functional specifications for SAP changes and enhancements. At WAGO UK, authored specs for S/4HANA transition objects and custom automations.',
+      'LSMW':            'Used LSMW for master data migrations during ERP rollouts at WAGO Brazil and UK — including materials, customers and vendor loads.',
+      'SAP Query':       'Created SAP queries for operational reporting across SD, MM and PP. Used extensively at WAGO for data analysis supporting automation ROI decisions.',
+      'TestRail':        'Manages test cases and test cycles in TestRail for SAP changes at The Config Team. Used to track regression coverage during change delivery cycles.',
+      'EDI/IDoc':        'Configured and supported EDI/IDoc integrations at WAGO UK for customer order processing. Troubleshot IDoc failures and mapping issues as part of AMS delivery.',
+      // Development
+      'Python':          'Primary language for AI tooling at The Config Team. Used to build MCP servers, document generation pipelines, and Python-DOCX XML manipulation for automated spec creation.',
+      'Node.js':         'Used in MCP server development and automation tooling. Built integrations between ticketing systems and document generation workflows via Node-based services.',
+      'TypeScript':      'Applied in MCP server development alongside Node.js. Type safety applied to integration code for reliability in production AI agent workflows.',
+      'JavaScript':      'Used in web development and front-end scripting across personal and professional projects. This portfolio is built with Astro and vanilla JS.',
+      'SQL':             'Used for data analysis across SAP projects. Queried databases to identify automation candidates by measuring manual effort and transaction volumes to guide ROI decisions.',
+      'PostgreSQL':      'Primary relational database in Python-based automation systems. Used for application data persistence in AI tooling infrastructure.',
+      'ABAP':            'Reads and analyses ABAP code for BAPI trace and enhancement work. At WAGO, used ABAP knowledge to design integration entry points and debug standard SAP logic.',
+      'PHP':             'Used in earlier web development projects. Built internal portal tools and web interfaces during the WAGO Brazil tenure.',
+      'C/C++':           'Programming foundation from the System Analysis & Development degree at Fatec. Applied low-level concepts to understand memory, system behaviour and how higher-level abstractions work.',
+      'Docker':          'Uses Docker for local development environments and containerised deployment of automation tooling. Applied in CI/CD pipelines for AI agent services.',
+      'Linux':           'Primary OS for development and server work. Used for scripting, server administration and running automation tooling in production and local environments.',
+      'Git':             'Used across all engineering projects. Manages AI tooling codebase and personal projects on GitHub with branching and PR workflows.',
+      'AWS':             'Deployed automation services on AWS. Used EC2, Lambda and S3 in cloud-hosted AI agent infrastructure at The Config Team.',
+      'Azure':           'Used Azure services in enterprise integration projects. Familiarity with Azure Functions and storage in Power Platform automation pipelines.',
+      'GCP':             'Used GCP services in AI/ML experimentation and data pipeline work alongside other cloud providers.',
+      'CI/CD':           'Builds and maintains CI/CD pipelines for AI tooling at The Config Team. Uses GitHub Actions for automated testing and deployment of MCP servers.',
+      'REST APIs':       'Designed and consumed REST APIs in SAP integration and AI automation work. At WAGO, built the API layer for order automation including BAPI-backed idempotent endpoints.',
+      'GraphQL':         'Used GraphQL for data querying in integration projects and internal tooling. Applied where flexible querying improves performance over fixed REST endpoints.',
+      'Power Automate':  'Built Power Automate flows for RPA at WAGO UK — automating data transfers and order processing steps that previously required daily manual intervention.',
+      'Power Apps':      'Developed Power Apps for business process interfaces alongside Power Automate in RPA automation projects at WAGO UK.',
+      // AI & Tooling
+      'MCP Servers':     'Built custom MCP servers from scratch at The Config Team — connecting AI agents to live ticket data, SharePoint documents and internal APIs in real time. Core of the AI Champion tooling.',
+      'Servidores MCP':  'Built custom MCP servers from scratch at The Config Team — connecting AI agents to live ticket data, SharePoint documents and internal APIs in real time. Core of the AI Champion tooling.',
+      'AI Agents':       'Designed and implemented AI agent systems that read ticket context, draft documents and improve output quality via a human-in-the-loop feedback loop. Currently deployed in production.',
+      'Agentes de IA':   'Designed and implemented AI agent systems that read ticket context, draft documents and improve output quality via a human-in-the-loop feedback loop. Currently deployed in production.',
+      'Claude API':      'Uses the Claude API as the core LLM engine in AI tooling at The Config Team. Designed prompts and integrations for document generation, triage and self-improving loops.',
+      'GitHub Copilot':  'Daily use in development work. Experienced in AI-assisted coding workflows and the trade-offs of AI code generation in production codebases.',
+      'Prompt Engineering':'Designs prompts for production AI agents — balancing context, grounding, output format and iterative self-improvement. Core skill behind the AI Champion document generation system.',
+      'Power BI':        'Created Power BI dashboards for operational and business reporting at WAGO UK. Used for data visualisation to support management decisions and justify automation investment.',
+      'SAP Analytics Cloud':'Worked with SAP Analytics Cloud for reporting in SAP-centric environments. Applied to BI improvements during the WAGO UK S/4HANA transition.',
+      'IoT':             'Applies IoT principles in home automation projects — connecting hardware sensors and smart devices via custom software integrations built from the ground up.',
+      'Home Automation': 'Built a personal home automation system integrating multiple smart home platforms via custom software and MCP tooling. The same integration mindset as professional system work.',
+      'Automacao Residencial': 'Built a personal home automation system integrating multiple smart home platforms via custom software and MCP tooling. The same integration mindset as professional system work.',
+    };
+
     // ── i18n copy ─────────────────────────────────────────────────────────────
     const copy = {
       en: {
-        eyebrow: 'System Analyst & Web Developer',
-        subtitle: 'I build things for the web — and fix them when they break.',
-        location: 'From Brazil, open to remote work',
+        eyebrow: 'SAP AMS Consultant · Developer · AI Engineer',
+        subtitle: 'Where enterprise process meets production engineering — amplified by AI.',
+        location: 'Edinburgh, Scotland',
         ctaPrimary: 'View experience',
         ctaSecondary: 'Get in touch',
         nav0: 'About', nav1: 'Experience', nav2: 'Services', nav3: 'Skills', nav4: 'Contact',
         aboutTitle: 'About',
-        aboutBody: 'I started learning IT early and kept going through college, support roles, and self-directed web projects. I like communication-heavy work: understanding what people need, turning messy processes into usable systems, and making technical ideas easier to act on.',
+        aboutLead: 'Most SAP consultants have never written production code. Most developers have never sat with a client trying to close period-end.',
+        aboutBody: 'I live in both. With a decade across SAP SD, MM, PP, LE and FICO — plus a degree in system development and hands-on engineering work — I combine deep functional consulting with production-grade technical delivery. With AI as a force multiplier, I move at specialist speed in either world.',
         facts: [
-          ['2015–2016', 'IT analyst intern experience'],
-          ['Web', 'Design and development projects'],
-          ['Remote', 'Interested in distributed teams'],
+          ['10+', 'Years SAP experience'],
+          ['12+', 'Active clients'],
+          ['5',   'Industries'],
         ],
         experienceTitle: 'Experience',
         experience: [
           {
-            period: '2015–2016',
-            title: 'Support / IT Analyst Intern',
-            org: 'WAGO Kontakttechnik',
+            period: '2024 – Present',
+            title: 'SAP AMS Consultant',
+            org: 'The Config Team Ltd · Edinburgh',
             points: [
-              'Identified internal client needs and developed custom technical solutions.',
-              'Maintained systems for data warehouse and business intelligence initiatives.',
-              'Processed data with Excel, Access, and SQL.',
-              'Provided first-line technical support and coordinated with external specialists.',
+              'Supporting 12+ clients across wholesale, construction, beverages and production on ECC and S/4HANA — incident resolution, service requests, functional specs and change delivery in line with ITIL and SLA.',
+              'Named AI Champion — mapped every manual step in the consultant workflow and rebuilt them as agent-driven tasks using custom MCP servers I wrote, connecting AI agents to the internal ticketing system, live SLA data and SharePoint.',
+              'Automated generation of quotes, unit test documents and functional specs from ticket history — eliminating manual formatting, copy-paste and file management that previously consumed significant consultant time each week.',
+              'Implemented a self-improving quality loop: AI draft → consultant edits → AI diffs both versions and refines future outputs, compounding document quality over time without extra token spend.',
             ],
+            tags: ['SD', 'MM', 'PP', 'FICO', 'S/4HANA', 'MCP', 'AI Agents', 'Python'],
           },
           {
-            period: '2014–2017',
-            title: 'Systems Analysis and Development',
-            org: 'University studies',
+            period: '2019 – 2024',
+            title: 'SAP Consultant',
+            org: 'WAGO UK · Rugby',
             points: [
-              'Focused on programming fundamentals, Java, systems analysis, and applied development.',
-              'Built self-directed web and design projects alongside coursework.',
+              'Led ECC implementation and S/4HANA transition.',
+              'Built process automation via APIs, RPA (Power Automate) and EDI integrations.',
+              'Reduced operational headcount through data-driven ROI analysis — selecting processes by high manual effort, low variability and clear automation rules.',
             ],
+            tags: ['SD', 'MM', 'PP', 'LE', 'FICO', 'RPA', 'API', 'EDI'],
+          },
+          {
+            period: '2015 – 2019',
+            title: 'SAP Consultant',
+            org: 'WAGO Brazil · Jundiai',
+            points: [
+              'Full ERP rollout across SD, PP, MM and WMS.',
+              'Internal portal development, BI improvements and infrastructure planning.',
+            ],
+            tags: ['SD', 'PP', 'MM', 'WMS', 'BI'],
+          },
+          {
+            period: '2014 – 2018',
+            title: 'System Analysis & Development',
+            org: 'Fatec · Jundiai',
+            points: [
+              'Degree in systems analysis and software development.',
+              'Foundation in programming, databases, networking and systems architecture.',
+            ],
+            tags: ['Education'],
           },
         ],
         servicesTitle: 'Services',
         services: [
-          ['Web Design', 'Responsive websites and polished visual interfaces.'],
-          ['Development', 'Practical front-end implementation and maintainable UI code.'],
+          {
+            title: 'SAP & Business Consulting',
+            body: 'ECC and S/4HANA delivery across SD, MM, PP, LE and FICO. From incident resolution to full implementations.',
+            points: [
+              'ECC & S/4HANA support and transitions',
+              'AMS incident & service management (ITIL)',
+              'Functional specs & change delivery',
+              'Root cause analysis & process optimisation',
+              'EDI/IDoc integrations',
+              'Stakeholder communication & workshops',
+            ],
+            tag: '12+ active clients · 5 industries',
+          },
+          {
+            title: 'Development & AI Engineering',
+            body: 'Production-grade automation and tooling. From BAPI integrations to custom AI agents and MCP servers.',
+            points: [
+              'Custom MCP server development',
+              'AI agent design & implementation',
+              'API & system integrations (REST, EDI, GraphQL)',
+              'Process automation (RPA, Power Platform)',
+              'CI/CD pipelines & DevOps',
+              'Data analytics (Power BI, SAP Analytics Cloud)',
+            ],
+            tag: 'Automation-first · Production-grade',
+          },
         ],
         skillsTitle: 'Skills',
         skills: [
-          ['HTML / CSS', 80],
-          ['JavaScript', 65],
-          ['React', 60],
-          ['Java', 50],
+          {
+            group: 'SAP & Business',
+            tags: ['SAP ECC', 'SAP S/4HANA', 'SAP SD', 'SAP MM', 'SAP PP', 'SAP LE', 'SAP FICO', 'ITIL', 'AMS', 'SLA Management', 'Functional Specs', 'LSMW', 'SAP Query', 'TestRail', 'EDI/IDoc'],
+          },
+          {
+            group: 'Development',
+            tags: ['Python', 'Node.js', 'TypeScript', 'JavaScript', 'SQL', 'PostgreSQL', 'ABAP', 'PHP', 'C/C++', 'Docker', 'Linux', 'Git', 'AWS', 'Azure', 'GCP', 'CI/CD', 'REST APIs', 'GraphQL', 'Power Automate', 'Power Apps'],
+          },
+          {
+            group: 'AI & Tooling',
+            tags: ['MCP Servers', 'AI Agents', 'Claude API', 'GitHub Copilot', 'Prompt Engineering', 'Power BI', 'SAP Analytics Cloud', 'IoT', 'Home Automation'],
+          },
         ],
         contactTitle: 'Contact',
-        contactBody: 'Available for remote web and IT projects. Feel free to reach out.',
+        contactBody: 'Open to SAP consulting, AI engineering, advisory and fractional roles. Based in Edinburgh, available remotely worldwide.',
+        cfName: 'Your name',
+        cfEmail: 'Your email',
+        cfMsg: 'Your message',
+        cfSubmit: 'Send message',
+        cfSent: 'Message sent — I\'ll be in touch.',
+        cfErr: 'Something went wrong. Please try again or email me directly.',
         footerRights: 'All rights reserved.',
       },
       pt: {
-        eyebrow: 'Analista de Sistemas & Desenvolvedor Web',
-        subtitle: 'Construo coisas para a web — e conserto quando quebram.',
-        location: 'Do Brasil, aberto a trabalho remoto',
+        eyebrow: 'Consultor SAP AMS · Desenvolvedor · Engenheiro de IA',
+        subtitle: 'Onde processos empresariais encontram engenharia de producao — amplificados por IA.',
+        location: 'Edimburgo, Escocia',
         ctaPrimary: 'Ver experiencia',
         ctaSecondary: 'Entrar em contato',
         nav0: 'Sobre', nav1: 'Experiencia', nav2: 'Servicos', nav3: 'Skills', nav4: 'Contato',
         aboutTitle: 'Sobre',
-        aboutBody: 'Comecei a aprender TI cedo e continuei na faculdade, em funcoes de suporte e em projetos web proprios. Gosto de trabalhos com comunicacao: entender necessidades, transformar processos confusos em sistemas usaveis e tornar ideias tecnicas mais claras.',
+        aboutLead: 'A maioria dos consultores SAP nunca escreveu codigo em producao. A maioria dos desenvolvedores nunca sentou com um cliente tentando fechar o periodo.',
+        aboutBody: 'Eu vivo nos dois mundos. Com uma decada no SAP SD, MM, PP, LE e FICO — mais uma formacao em desenvolvimento de sistemas e trabalho de engenharia na pratica — combino consultoria funcional profunda com entrega tecnica de nivel producao. Com IA como multiplicador de forca, atuo com velocidade de especialista em qualquer dos dois mundos.',
         facts: [
-          ['2015–2016', 'Experiencia como analista de TI'],
-          ['Web', 'Projetos de design e desenvolvimento'],
-          ['Remoto', 'Interesse em times distribuidos'],
+          ['10+', 'Anos de experiencia SAP'],
+          ['12+', 'Clientes ativos'],
+          ['5',   'Setores atendidos'],
         ],
         experienceTitle: 'Experiencia',
         experience: [
           {
-            period: '2015–2016',
-            title: 'Estagiario de Suporte / Analista de TI',
-            org: 'WAGO Kontakttechnik',
+            period: '2024 – Presente',
+            title: 'Consultor SAP AMS',
+            org: 'The Config Team Ltd · Edimburgo',
             points: [
-              'Identifiquei necessidades internas e desenvolvi solucoes tecnicas customizadas.',
-              'Mantive sistemas para data warehouse e iniciativas de business intelligence.',
-              'Processei dados com Excel, Access e SQL.',
-              'Prestei suporte tecnico de primeiro nivel e coordenei com especialistas externos.',
+              'Suporte a 12+ clientes nos setores de atacado, construcao, bebidas e producao em ECC e S/4HANA — resolucao de incidentes, solicitacoes de servico, especificacoes funcionais e entrega de mudancas conforme ITIL e SLA.',
+              'Designado AI Champion — mapeei cada etapa manual do fluxo de trabalho dos consultores e as reconstrui como tarefas geridas por agentes, usando servidores MCP customizados que integram o sistema interno de tickets, dados de SLA em tempo real e SharePoint.',
+              'Automatizei a geracao de quotes, documentos de testes unitarios e especificacoes funcionais a partir do historico de tickets — eliminando formatacao manual, copias e gerenciamento de arquivos que antes consumiam horas da semana dos consultores.',
+              'Implementei um ciclo de autoaprimoramento: rascunho da IA → edicao do consultor → IA compara as duas versoes e refina saidas futuras, melhorando a qualidade dos documentos progressivamente sem custo extra de tokens.',
             ],
+            tags: ['SD', 'MM', 'PP', 'FICO', 'S/4HANA', 'MCP', 'Agentes de IA', 'Python'],
           },
           {
-            period: '2014–2017',
-            title: 'Analise e Desenvolvimento de Sistemas',
-            org: 'Faculdade',
+            period: '2019 – 2024',
+            title: 'Consultor SAP',
+            org: 'WAGO UK · Rugby',
             points: [
-              'Foco em fundamentos de programacao, Java, analise de sistemas e desenvolvimento aplicado.',
-              'Projetos proprios de web e design em paralelo aos estudos.',
+              'Liderou implementacao ECC e transicao para S/4HANA.',
+              'Construiu automacao de processos via APIs, RPA (Power Automate) e integracoes EDI.',
+              'Reduziu headcount operacional por analise de ROI baseada em dados — selecionando processos por alto esforco manual, baixa variabilidade e regras claras.',
             ],
+            tags: ['SD', 'MM', 'PP', 'LE', 'FICO', 'RPA', 'API', 'EDI'],
+          },
+          {
+            period: '2015 – 2019',
+            title: 'Consultor SAP',
+            org: 'WAGO Brasil · Jundiai',
+            points: [
+              'Implantacao completa de ERP com foco em SD, PP, MM e WMS.',
+              'Desenvolvimento de portal interno, melhorias de BI e planejamento de infraestrutura.',
+            ],
+            tags: ['SD', 'PP', 'MM', 'WMS', 'BI'],
+          },
+          {
+            period: '2014 – 2018',
+            title: 'Analise e Desenvolvimento de Sistemas',
+            org: 'Fatec · Jundiai',
+            points: [
+              'Graduacao em analise e desenvolvimento de sistemas.',
+              'Base em programacao, bancos de dados, redes e arquitetura de sistemas.',
+            ],
+            tags: ['Formacao'],
           },
         ],
         servicesTitle: 'Servicos',
         services: [
-          ['Web Design', 'Sites responsivos e interfaces visuais bem cuidadas.'],
-          ['Desenvolvimento', 'Implementacao front-end pratica e codigo de UI facil de manter.'],
+          {
+            title: 'Consultoria SAP & Negocios',
+            body: 'Entrega ECC e S/4HANA em SD, MM, PP, LE e FICO. Da resolucao de incidentes a implementacoes completas.',
+            points: [
+              'Suporte e transicoes ECC & S/4HANA',
+              'Gerenciamento de incidentes e servicos AMS (ITIL)',
+              'Especificacoes funcionais e entrega de mudancas',
+              'Analise de causa raiz e otimizacao de processos',
+              'Integracoes EDI/IDoc',
+              'Comunicacao com stakeholders e workshops',
+            ],
+            tag: '12+ clientes ativos · 5 setores',
+          },
+          {
+            title: 'Desenvolvimento & Engenharia de IA',
+            body: 'Automacao e ferramentas de nivel producao. De integracoes BAPI a agentes de IA e servidores MCP.',
+            points: [
+              'Desenvolvimento de servidores MCP customizados',
+              'Design e implementacao de agentes de IA',
+              'Integracoes de API e sistemas (REST, EDI, GraphQL)',
+              'Automacao de processos (RPA, Power Platform)',
+              'Pipelines CI/CD & DevOps',
+              'Analytics e relatorios (Power BI, SAP Analytics Cloud)',
+            ],
+            tag: 'Automation-first · Nivel producao',
+          },
         ],
         skillsTitle: 'Skills',
         skills: [
-          ['HTML / CSS', 80],
-          ['JavaScript', 65],
-          ['React', 60],
-          ['Java', 50],
+          {
+            group: 'SAP & Negocios',
+            tags: ['SAP ECC', 'SAP S/4HANA', 'SAP SD', 'SAP MM', 'SAP PP', 'SAP LE', 'SAP FICO', 'ITIL', 'AMS', 'Gestao de SLA', 'Specs Funcionais', 'LSMW', 'SAP Query', 'TestRail', 'EDI/IDoc'],
+          },
+          {
+            group: 'Desenvolvimento',
+            tags: ['Python', 'Node.js', 'TypeScript', 'JavaScript', 'SQL', 'PostgreSQL', 'ABAP', 'PHP', 'C/C++', 'Docker', 'Linux', 'Git', 'AWS', 'Azure', 'GCP', 'CI/CD', 'REST APIs', 'GraphQL', 'Power Automate', 'Power Apps'],
+          },
+          {
+            group: 'IA & Ferramentas',
+            tags: ['Servidores MCP', 'Agentes de IA', 'Claude API', 'GitHub Copilot', 'Prompt Engineering', 'Power BI', 'SAP Analytics Cloud', 'IoT', 'Automacao Residencial'],
+          },
         ],
         contactTitle: 'Contato',
-        contactBody: 'Disponivel para projetos remotos de web e TI. Entre em contato.',
+        contactBody: 'Disponivel para consultoria SAP, engenharia de IA, advisory e funcoes fracionais. Baseado em Edimburgo, disponivel remotamente no mundo todo.',
+        cfName: 'Seu nome',
+        cfEmail: 'Seu e-mail',
+        cfMsg: 'Sua mensagem',
+        cfSubmit: 'Enviar mensagem',
+        cfSent: 'Mensagem enviada — entrarei em contato em breve.',
+        cfErr: 'Algo deu errado. Tente novamente ou envie um e-mail diretamente.',
         footerRights: 'Todos os direitos reservados.',
       },
     };
@@ -283,13 +467,14 @@ import '../styles/global.css';
       sunIcon.style.display  = dark ? '' : 'none';
       moonIcon.style.display = dark ? 'none' : '';
       themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      const canvas = document.querySelector('.plum-canvas');
+      if (canvas) canvas.style.filter = dark ? '' : 'invert(1)';
     }
 
     themeBtn.addEventListener('click', () => {
       dark = !dark;
       localStorage.setItem('theme', dark ? 'dark' : 'light');
       applyTheme();
-      restartPlum();
     });
 
     // ── Language ──────────────────────────────────────────────────────────────
@@ -321,23 +506,40 @@ import '../styles/global.css';
               <h3>${item.title}</h3>
               <p class="org">${item.org}</p>
               <ul>${item.points.map(p => `<li>${p}</li>`).join('')}</ul>
+              ${item.tags ? `<div class="tl-chips">${item.tags.map(tag => `<span class="tl-chip">${tag}</span>`).join('')}</div>` : ''}
             </div>
           </article>`)
         .join('');
 
       // Services
       document.querySelector('.service-grid').innerHTML = t.services
-        .map(([title, body]) => `<article><h3>${title}</h3><p>${body}</p></article>`)
+        .map(svc => `
+          <article>
+            <h3>${svc.title}</h3>
+            <p>${svc.body}</p>
+            <ul class="service-card-points">${svc.points.map(p => `<li>${p}</li>`).join('')}</ul>
+            <span class="service-card-tag">${svc.tag}</span>
+          </article>`)
         .join('');
 
-      // Skills
+      // Skills — tag groups
       document.querySelector('.skills').innerHTML = t.skills
-        .map(([skill, value]) => `
-          <div class="skill">
-            <div><span>${skill}</span><strong>${value}%</strong></div>
-            <meter min="0" max="100" value="${value}">${value}%</meter>
+        .map(group => `
+          <div class="skill-group">
+            <p class="skill-group-label">${group.group}</p>
+            <div class="skill-tags">${group.tags.map(tag => {
+              const proof = skillProofs[tag] || '';
+              const attr  = proof ? ` data-proof="${proof.replace(/"/g, '&quot;')}"` : '';
+              return `<span class="skill-tag"${attr}>${tag}</span>`;
+            }).join('')}</div>
           </div>`)
         .join('');
+
+      // Placeholder translations
+      document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+        const key = el.dataset.i18nPh;
+        if (typeof t[key] === 'string') el.placeholder = t[key];
+      });
 
       // Lang button
       langFlag.src = lang === 'en' ? '/img/brazilFlag.png' : '/img/usFlag.png';
@@ -356,12 +558,6 @@ import '../styles/global.css';
     let plumRunning = false;
     let plumRaf = 0;
 
-    function restartPlum() {
-      plumRunning = false;
-      cancelAnimationFrame(plumRaf);
-      runPlum();
-    }
-
     function runPlum() {
       const canvas = document.querySelector('.plum-canvas');
       if (!canvas) return;
@@ -379,7 +575,7 @@ import '../styles/global.css';
         canvas.style.height = H + 'px';
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
         ctx.lineWidth   = 1;
-        ctx.strokeStyle = document.documentElement.dataset.theme === 'dark' ? '#ffffff18' : '#88888825';
+        ctx.strokeStyle = '#ffffff18';
       }
 
       const SPREAD   = Math.PI / 6;
@@ -442,10 +638,86 @@ import '../styles/global.css';
       });
     }
 
+    // ── Contact form ──────────────────────────────────────────────────────────
+    document.getElementById('contact-form').addEventListener('submit', async e => {
+      e.preventDefault();
+      const form    = e.target;
+      const btn     = form.querySelector('button[type="submit"]');
+      const status  = document.getElementById('cf-status');
+      const name    = document.getElementById('cf-name').value.trim();
+      const email   = document.getElementById('cf-email').value.trim();
+      const message = document.getElementById('cf-msg').value.trim();
+
+      btn.disabled = true;
+      status.textContent = '';
+      status.className = 'cf-status';
+
+      try {
+        const res = await fetch('https://formspree.io/f/xqenylgy', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ name, email, message }),
+        });
+        const data = await res.json();
+        if (res.ok && data.ok) {
+          status.textContent = copy[lang].cfSent;
+          status.className = 'cf-status ok';
+          form.reset();
+        } else {
+          status.textContent = copy[lang].cfErr;
+          status.className = 'cf-status err';
+        }
+      } catch {
+        status.textContent = copy[lang].cfErr;
+        status.className = 'cf-status err';
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
     // ── Init ──────────────────────────────────────────────────────────────────
     applyTheme();
     applyLang();
     runPlum();
+
+    // ── Skill tooltip ─────────────────────────────────────────────────────────
+    const tip     = document.getElementById('skill-tip');
+    const tipName = document.getElementById('skill-tip-name');
+    const tipBody = document.getElementById('skill-tip-body');
+
+    function positionTip(tagEl) {
+      const rect    = tagEl.getBoundingClientRect();
+      const tipW    = tip.offsetWidth  || 280;
+      const tipH    = tip.offsetHeight || 80;
+      const gap     = 10;
+      let top  = rect.top - tipH - gap;
+      if (top < 8) top = rect.bottom + gap;
+      let left = rect.left + rect.width / 2 - tipW / 2;
+      left = Math.max(8, Math.min(left, window.innerWidth - tipW - 8));
+      tip.style.top  = top  + 'px';
+      tip.style.left = left + 'px';
+    }
+
+    const skillsEl = document.querySelector('.skills');
+    skillsEl.addEventListener('mouseover', e => {
+      const tagEl = e.target.closest('.skill-tag');
+      if (!tagEl || !tagEl.dataset.proof) return;
+      tipName.textContent = tagEl.textContent;
+      tipBody.textContent = tagEl.dataset.proof;
+      tip.setAttribute('aria-hidden', 'false');
+      tip.classList.add('visible');
+      positionTip(tagEl);
+    });
+    skillsEl.addEventListener('mouseover', e => {
+      if (!e.target.closest('.skill-tag')) {
+        tip.classList.remove('visible');
+        tip.setAttribute('aria-hidden', 'true');
+      }
+    });
+    skillsEl.addEventListener('mouseleave', () => {
+      tip.classList.remove('visible');
+      tip.setAttribute('aria-hidden', 'true');
+    });
   </script>
 
 </body>

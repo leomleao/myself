@@ -3,3 +3,5 @@ dist/
 .astro/
 Thumbs.db
 .mcp.json
+docs/
+.DS_Store

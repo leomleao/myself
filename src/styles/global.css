@@ -163,12 +163,11 @@ main {
 
 #l        { animation: sig-draw    10s ease-in-out 0s    1 normal forwards; }
 #eonardo  { animation: sig-draw    10s ease-in-out 1.7s  1 normal forwards; }
-#m        { animation: sig-draw    10s ease-in-out 3s    1 normal forwards; }
-#firstdot { animation: sig-dot-pop 10s ease-in-out 3.3s  1 normal forwards; }
+#ml       { animation: sig-draw    10s ease-in-out 3s    1 normal forwards; }
 #leao     { animation: sig-draw    10s ease-in-out 4s    1 normal forwards; }
 #til      { animation: sig-draw    10s ease-in-out 5.3s  1 normal forwards; }
 #lasttil  { animation: sig-draw    10s ease-in-out 5.1s  1 normal forwards; }
-#lastdot  { animation: sig-dot-pop 10s ease-in-out 5.3s  1 normal forwards; }
+#dot      { animation: sig-dot-pop 10s ease-in-out 5.3s  1 normal forwards; }
 
 .profile-eyebrow {
   margin: 0 0 12px;

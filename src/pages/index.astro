@@ -66,8 +66,8 @@ import '../styles/global.css';
       </div>
       <nav class="profile-nav" aria-label="Main navigation">
         <a href="#about"      data-i18n="nav0">About</a>
-        <a href="#experience" data-i18n="nav1">Experience</a>
-        <a href="#services"   data-i18n="nav2">Services</a>
+        <a href="#services"   data-i18n="nav1">Services</a>
+        <a href="#experience" data-i18n="nav2">Experience</a>
         <a href="#skills"     data-i18n="nav3">Skills</a>
         <a href="#contact"    data-i18n="nav4">Contact</a>
       </nav>
@@ -90,20 +90,20 @@ import '../styles/global.css';
       <!-- rendered by JS -->
     </section>
 
-    <!-- ── Experience ── -->
-    <section id="experience" class="section">
+    <!-- ── Services ── -->
+    <section id="services" class="section muted">
       <p class="section-label">02</p>
-      <h2 data-i18n="experienceTitle">Experience</h2>
-      <div class="timeline">
+      <h2 data-i18n="servicesTitle">Services</h2>
+      <div class="service-grid">
         <!-- rendered by JS -->
       </div>
     </section>
 
-    <!-- ── Services ── -->
-    <section id="services" class="section muted">
+    <!-- ── Experience ── -->
+    <section id="experience" class="section">
       <p class="section-label">03</p>
-      <h2 data-i18n="servicesTitle">Services</h2>
-      <div class="service-grid">
+      <h2 data-i18n="experienceTitle">Experience</h2>
+      <div class="timeline">
         <!-- rendered by JS -->
       </div>
     </section>
@@ -227,7 +227,7 @@ import '../styles/global.css';
         location: 'Edinburgh, Scotland',
         ctaPrimary: 'View experience',
         ctaSecondary: 'Get in touch',
-        nav0: 'About', nav1: 'Experience', nav2: 'Services', nav3: 'Skills', nav4: 'Contact',
+        nav0: 'About', nav1: 'Services', nav2: 'Experience', nav3: 'Skills', nav4: 'Contact',
         aboutTitle: 'About',
         aboutLead: 'Most SAP consultants have never written production code. Most developers have never sat with a client trying to close period-end.',
         aboutBody: 'I live in both. With a decade across SAP SD, MM, PP, LE and FICO — plus a degree in system development and hands-on engineering work — I combine deep functional consulting with production-grade technical delivery. With AI as a force multiplier, I move at specialist speed in either world.',
@@ -239,47 +239,82 @@ import '../styles/global.css';
         experienceTitle: 'Experience',
         experience: [
           {
-            period: '2024 – Present',
+            period: '2026 · Now', year: 'Now', color: '#f59f00', icon: 'sparkles',
+            title: 'Building the Next Chapter',
+            org: 'Edinburgh, Scotland',
+            statements: [
+              { brief: 'AI agent infrastructure in production', detail: 'Running MCP server systems that connect AI agents to live business data — expanding the toolchain with new capabilities and integrations beyond the workplace.' },
+              { brief: 'Home automation as a second lab', detail: 'Building a deeply integrated home system — custom software, IoT sensors and multi-platform orchestration — the same systems-thinking that drives enterprise work, applied at home.' },
+              { brief: 'Open to advisory and engineering roles', detail: 'Available for SAP consulting, AI engineering, architecture advisory and fractional engagements. Based in Edinburgh, operating globally.' },
+            ],
+          },
+          {
+            period: '2024 – Present', year: '2024', color: '#f76707', icon: 'briefcase',
             title: 'SAP AMS Consultant',
             org: 'The Config Team Ltd · Edinburgh',
-            points: [
-              'Supporting 12+ clients across wholesale, construction, beverages and production on ECC and S/4HANA — incident resolution, service requests, functional specs and change delivery in line with ITIL and SLA.',
-              'Named AI Champion — mapped every manual step in the consultant workflow and rebuilt them as agent-driven tasks using custom MCP servers I wrote, connecting AI agents to the internal ticketing system, live SLA data and SharePoint.',
-              'Automated generation of quotes, unit test documents and functional specs from ticket history — eliminating manual formatting, copy-paste and file management that previously consumed significant consultant time each week.',
-              'Implemented a self-improving quality loop: AI draft → consultant edits → AI diffs both versions and refines future outputs, compounding document quality over time without extra token spend.',
+            statements: [
+              { brief: '12+ active clients across 5 industries', detail: 'ECC and S/4HANA delivery in wholesale, construction, beverages and production — incident resolution, functional specs and change delivery aligned with ITIL and SLA.' },
+              { brief: 'Named AI Champion for the company', detail: 'Mapped every manual step in the consultant workflow and rebuilt them as agent-driven tasks using custom MCP servers, connecting AI to live ticket data and SharePoint.' },
+              { brief: 'Automated document generation from tickets', detail: 'Eliminated manual formatting and copy-paste — quotes, unit test documents and functional specs now generated directly from ticket history.' },
+              { brief: 'Self-improving quality loop', detail: 'AI draft → consultant edits → AI diffs both versions and refines future outputs, compounding quality over time without extra token spend.' },
             ],
-            tags: ['SD', 'MM', 'PP', 'FICO', 'S/4HANA', 'MCP', 'AI Agents', 'Python'],
           },
           {
-            period: '2019 – 2024',
+            period: '2019 – 2024', year: '2019', color: '#0ca678', icon: 'briefcase',
             title: 'SAP Consultant',
             org: 'WAGO UK · Rugby',
-            points: [
-              'Led ECC implementation and S/4HANA transition.',
-              'Built process automation via APIs, RPA (Power Automate) and EDI integrations.',
-              'Reduced operational headcount through data-driven ROI analysis — selecting processes by high manual effort, low variability and clear automation rules.',
+            statements: [
+              { brief: 'Led ECC implementation and S/4HANA transition', detail: 'End-to-end functional delivery from design through go-live, covering SD, MM, PP, LE and FICO across the UK operation.' },
+              { brief: 'Built automation via APIs, RPA and EDI', detail: 'Power Automate flows and custom BAPI integrations for order processing — reduced daily manual intervention to near zero.' },
+              { brief: 'Data-driven ROI analysis drove headcount reduction', detail: 'Selected automation candidates by measuring manual effort, variability and rule clarity — delivered measurable operational savings.' },
             ],
-            tags: ['SD', 'MM', 'PP', 'LE', 'FICO', 'RPA', 'API', 'EDI'],
           },
           {
-            period: '2015 – 2019',
+            period: 'May 2019', year: "May '19", color: '#4dabf7', icon: 'plane',
+            title: 'Relocated to the UK',
+            org: 'Brazil → Edinburgh, Scotland',
+            statements: [
+              { brief: 'Moved independently from Brazil to the UK', detail: 'Packed up and moved alone — a calculated bet on professional growth and a new chapter. No safety net, no prior network in the UK.' },
+              { brief: 'A lesson in self-reliance and adaptability', detail: 'Navigating a new country, culture and job market from scratch reinforced the same mindset applied to hard technical problems: break it down, execute, iterate.' },
+            ],
+          },
+          {
+            period: '2015 – 2019', year: '2015', color: '#7048e8', icon: 'briefcase',
             title: 'SAP Consultant',
             org: 'WAGO Brazil · Jundiai',
-            points: [
-              'Full ERP rollout across SD, PP, MM and WMS.',
-              'Internal portal development, BI improvements and infrastructure planning.',
+            statements: [
+              { brief: 'Full ERP rollout: SD, PP, MM and WMS', detail: 'Led the complete implementation from functional design through hypercare, covering all logistics, production and warehouse modules.' },
+              { brief: 'Internal portal development and BI improvements', detail: 'Built web-based tools for process visibility and reporting in PHP — the technical interface between the ERP and the business.' },
+              { brief: 'Infrastructure planning that fed the UK expansion', detail: 'System and reporting decisions at Brazil directly shaped the rollout architecture subsequently deployed at WAGO UK.' },
             ],
-            tags: ['SD', 'PP', 'MM', 'WMS', 'BI'],
           },
           {
-            period: '2014 – 2018',
+            period: '2014 – 2018', year: '2014', color: '#1971c2', icon: 'graduation',
             title: 'System Analysis & Development',
             org: 'Fatec · Jundiai',
-            points: [
-              'Degree in systems analysis and software development.',
-              'Foundation in programming, databases, networking and systems architecture.',
+            statements: [
+              { brief: '6-semester tech degree: 2,400 hours of engineering', detail: 'Software Engineering across 4 modules, programming in C and Java, data structures, databases, OS, networks and security — plus electives in Script Programming and AI.' },
+              { brief: 'The bridge between two worlds', detail: 'The formal training behind operating as both SAP consultant and production engineer — reading ABAP, writing APIs, building MCP servers — without being only one.' },
+              { brief: '240h internship + 160h graduation project', detail: 'Practical systems work beyond the classroom — applying full-stack and systems-thinking in real environments before entering the professional market.' },
             ],
-            tags: ['Education'],
+          },
+          {
+            period: '2011', year: '2011', color: '#5c7a4e', icon: 'wrench',
+            title: 'Machining Mechanic Course',
+            org: 'Neumayer Tekfor · Jundiai',
+            statements: [
+              { brief: 'Qualified machining mechanic — heavy metal shop floor', detail: 'Completed a formal machining course while working at Neumayer Tekfor, a heavy-duty industrial manufacturer. Operated CNC machines, lathes and precision tooling.' },
+              { brief: 'The confidence to be hands-on in any project', detail: 'Working in a physical, high-stakes environment where precision matters built a mindset that carries into software: understand the machine, own the result, never guess.' },
+            ],
+          },
+          {
+            period: '2003', year: '2003', color: '#495057', icon: 'monitor',
+            title: 'First PC & Curiosity Ignited',
+            org: 'Brazil',
+            statements: [
+              { brief: 'First computer — discovered DOS and never looked back', detail: 'Got a first PC and immediately started exploring: booting into DOS, editing config files, swapping components. The curiosity that followed has never stopped.' },
+              { brief: 'Early hands-on with hardware and system fundamentals', detail: 'Messing with PC parts and understanding boot sequences at 10 years old laid the groundwork for every technical discipline that came after.' },
+            ],
           },
         ],
         servicesTitle: 'Services',
@@ -334,6 +369,8 @@ import '../styles/global.css';
         cfSubmit: 'Send message',
         cfSent: 'Message sent — I\'ll be in touch.',
         cfErr: 'Something went wrong. Please try again or email me directly.',
+        htlShowMore: 'Show details',
+        htlShowLess: 'Hide details',
         footerRights: 'All rights reserved.',
       },
       pt: {
@@ -342,7 +379,7 @@ import '../styles/global.css';
         location: 'Edimburgo, Escocia',
         ctaPrimary: 'Ver experiencia',
         ctaSecondary: 'Entrar em contato',
-        nav0: 'Sobre', nav1: 'Experiencia', nav2: 'Servicos', nav3: 'Skills', nav4: 'Contato',
+        nav0: 'Sobre', nav1: 'Servicos', nav2: 'Experiencia', nav3: 'Skills', nav4: 'Contato',
         aboutTitle: 'Sobre',
         aboutLead: 'A maioria dos consultores SAP nunca escreveu codigo em producao. A maioria dos desenvolvedores nunca sentou com um cliente tentando fechar o periodo.',
         aboutBody: 'Eu vivo nos dois mundos. Com uma decada no SAP SD, MM, PP, LE e FICO — mais uma formacao em desenvolvimento de sistemas e trabalho de engenharia na pratica — combino consultoria funcional profunda com entrega tecnica de nivel producao. Com IA como multiplicador de forca, atuo com velocidade de especialista em qualquer dos dois mundos.',
@@ -354,47 +391,82 @@ import '../styles/global.css';
         experienceTitle: 'Experiencia',
         experience: [
           {
-            period: '2024 – Presente',
+            period: '2026 · Agora', year: 'Agora', color: '#f59f00', icon: 'sparkles',
+            title: 'Construindo o Proximo Capitulo',
+            org: 'Edimburgo, Escocia',
+            statements: [
+              { brief: 'Infraestrutura de agentes de IA em producao', detail: 'Rodando sistemas de servidores MCP que conectam agentes de IA a dados empresariais em tempo real — expandindo o toolchain com novas capacidades e integracoes alem do ambiente de trabalho.' },
+              { brief: 'Automacao residencial como segundo laboratorio', detail: 'Construindo um sistema residencial profundamente integrado — software customizado, sensores IoT e orquestracao multiplataforma — o mesmo raciocinio de sistemas aplicado em casa.' },
+              { brief: 'Aberto a consultoria e funcoes de engenharia', detail: 'Disponivel para consultoria SAP, engenharia de IA, advisory de arquitetura e funcoes fracionadas. Baseado em Edimburgo, atuando globalmente.' },
+            ],
+          },
+          {
+            period: '2024 – Presente', year: '2024', color: '#f76707', icon: 'briefcase',
             title: 'Consultor SAP AMS',
             org: 'The Config Team Ltd · Edimburgo',
-            points: [
-              'Suporte a 12+ clientes nos setores de atacado, construcao, bebidas e producao em ECC e S/4HANA — resolucao de incidentes, solicitacoes de servico, especificacoes funcionais e entrega de mudancas conforme ITIL e SLA.',
-              'Designado AI Champion — mapeei cada etapa manual do fluxo de trabalho dos consultores e as reconstrui como tarefas geridas por agentes, usando servidores MCP customizados que integram o sistema interno de tickets, dados de SLA em tempo real e SharePoint.',
-              'Automatizei a geracao de quotes, documentos de testes unitarios e especificacoes funcionais a partir do historico de tickets — eliminando formatacao manual, copias e gerenciamento de arquivos que antes consumiam horas da semana dos consultores.',
-              'Implementei um ciclo de autoaprimoramento: rascunho da IA → edicao do consultor → IA compara as duas versoes e refina saidas futuras, melhorando a qualidade dos documentos progressivamente sem custo extra de tokens.',
+            statements: [
+              { brief: '12+ clientes ativos em 5 setores', detail: 'Entrega ECC e S/4HANA em atacado, construcao, bebidas e producao — resolucao de incidentes, specs funcionais e entrega de mudancas conforme ITIL e SLA.' },
+              { brief: 'Designado AI Champion da empresa', detail: 'Mapeou cada etapa manual do fluxo dos consultores e reconstruiu como tarefas geridas por agentes, conectando IA a dados de tickets e SharePoint em tempo real.' },
+              { brief: 'Geracao automatizada de documentos a partir de tickets', detail: 'Eliminou formatacao manual e copias — quotes, documentos de testes unitarios e specs funcionais agora gerados diretamente do historico de tickets.' },
+              { brief: 'Ciclo de autoaprimoramento de qualidade', detail: 'Rascunho da IA → edicao do consultor → IA compara as versoes e refina saidas futuras, melhorando a qualidade progressivamente sem custo extra.' },
             ],
-            tags: ['SD', 'MM', 'PP', 'FICO', 'S/4HANA', 'MCP', 'Agentes de IA', 'Python'],
           },
           {
-            period: '2019 – 2024',
+            period: '2019 – 2024', year: '2019', color: '#0ca678', icon: 'briefcase',
             title: 'Consultor SAP',
             org: 'WAGO UK · Rugby',
-            points: [
-              'Liderou implementacao ECC e transicao para S/4HANA.',
-              'Construiu automacao de processos via APIs, RPA (Power Automate) e integracoes EDI.',
-              'Reduziu headcount operacional por analise de ROI baseada em dados — selecionando processos por alto esforco manual, baixa variabilidade e regras claras.',
+            statements: [
+              { brief: 'Liderou a implementacao ECC e transicao S/4HANA', detail: 'Entrega funcional de ponta a ponta — do design ao go-live, cobrindo SD, MM, PP, LE e FICO na operacao do Reino Unido.' },
+              { brief: 'Construiu automacao via APIs, RPA e EDI', detail: 'Fluxos Power Automate e integracoes BAPI para processamento de pedidos — reduziu a intervencao manual diaria a quase zero.' },
+              { brief: 'Analise de ROI gerou reducao de headcount operacional', detail: 'Selecionou candidatos a automacao por esforco manual, variabilidade e clareza de regras — entregou economia operacional mensuravel.' },
             ],
-            tags: ['SD', 'MM', 'PP', 'LE', 'FICO', 'RPA', 'API', 'EDI'],
           },
           {
-            period: '2015 – 2019',
+            period: 'Maio 2019', year: "Mai '19", color: '#4dabf7', icon: 'plane',
+            title: 'Mudanca para o Reino Unido',
+            org: 'Brasil → Edimburgo, Escocia',
+            statements: [
+              { brief: 'Mudou sozinho do Brasil para o Reino Unido', detail: 'Fez as malas e foi — uma aposta calculada no crescimento profissional e um novo capitulo. Sem rede de apoio, sem contatos previos no Reino Unido.' },
+              { brief: 'Uma licao de autonomia e adaptabilidade', detail: 'Navegar um novo pais, cultura e mercado de trabalho do zero reforcou a mesma mentalidade aplicada a problemas tecnicos dificeis: decompor, executar, iterar.' },
+            ],
+          },
+          {
+            period: '2015 – 2019', year: '2015', color: '#7048e8', icon: 'briefcase',
             title: 'Consultor SAP',
             org: 'WAGO Brasil · Jundiai',
-            points: [
-              'Implantacao completa de ERP com foco em SD, PP, MM e WMS.',
-              'Desenvolvimento de portal interno, melhorias de BI e planejamento de infraestrutura.',
+            statements: [
+              { brief: 'Implantacao completa de ERP: SD, PP, MM e WMS', detail: 'Liderou a implementacao do design funcional ate o hypercare, cobrindo todos os modulos de logistica, producao e armazem.' },
+              { brief: 'Portal interno e melhorias de BI', detail: 'Construiu ferramentas web para visibilidade de processos e relatorios em PHP — a interface tecnica entre o ERP e o negocio.' },
+              { brief: 'Planejamento de infraestrutura para expansao ao Reino Unido', detail: 'Decisoes de sistemas e relatorios no Brasil moldaram diretamente a arquitetura da implantacao seguinte na WAGO UK.' },
             ],
-            tags: ['SD', 'PP', 'MM', 'WMS', 'BI'],
           },
           {
-            period: '2014 – 2018',
+            period: '2014 – 2018', year: '2014', color: '#1971c2', icon: 'graduation',
             title: 'Analise e Desenvolvimento de Sistemas',
             org: 'Fatec · Jundiai',
-            points: [
-              'Graduacao em analise e desenvolvimento de sistemas.',
-              'Base em programacao, bancos de dados, redes e arquitetura de sistemas.',
+            statements: [
+              { brief: 'Curso superior de tecnologia: 2.400 horas de engenharia', detail: 'Engenharia de Software em 4 modulos, programacao em C e Java, estruturas de dados, bancos de dados, SO, redes e seguranca — mais eletivas em Programacao de Scripts e Inteligencia Artificial.' },
+              { brief: 'A ponte entre dois mundos', detail: 'A formacao formal por tras de atuar como consultor SAP e engenheiro de producao — lendo ABAP, escrevendo APIs, construindo servidores MCP — sem ser apenas um dos dois.' },
+              { brief: 'Estagio de 240h + Trabalho de Graduacao de 160h', detail: 'Trabalho pratico de sistemas alem da sala de aula — aplicando raciocinio full-stack e de sistemas em ambientes reais antes de entrar no mercado profissional.' },
             ],
-            tags: ['Formacao'],
+          },
+          {
+            period: '2011', year: '2011', color: '#5c7a4e', icon: 'wrench',
+            title: 'Curso de Mecanico de Usinagem',
+            org: 'Neumayer Tekfor · Jundiai',
+            statements: [
+              { brief: 'Mecanico de usinagem habilitado — chao de fabrica de metalurgia pesada', detail: 'Concluiu o curso formal enquanto trabalhava na Neumayer Tekfor, uma fabricante industrial pesada. Operou maquinas CNC, tornos e ferramentas de precisao.' },
+              { brief: 'A confianca para ser hands-on em qualquer projeto', detail: 'Trabalhar em um ambiente fisico e de alto risco onde a precisao importa construiu uma mentalidade que se aplica ao software: entenda a maquina, assuma o resultado, nunca chute.' },
+            ],
+          },
+          {
+            period: '2003', year: '2003', color: '#495057', icon: 'monitor',
+            title: 'Primeiro PC e a Curiosidade Acesa',
+            org: 'Brasil',
+            statements: [
+              { brief: 'Primeiro computador — descobriu o DOS e nunca mais parou', detail: 'Ganhou um PC e imediatamente comecou a explorar: iniciando no DOS, editando arquivos de configuracao, trocando componentes. A curiosidade que surgiu nao parou mais.' },
+              { brief: 'Primeiros contatos com hardware e fundamentos de sistemas', detail: 'Mexer em pecas de PC e entender sequencias de boot aos 10 anos lancou as bases para todas as disciplinas tecnicas que vieram depois.' },
+            ],
           },
         ],
         servicesTitle: 'Servicos',
@@ -449,13 +521,118 @@ import '../styles/global.css';
         cfSubmit: 'Enviar mensagem',
         cfSent: 'Mensagem enviada — entrarei em contato em breve.',
         cfErr: 'Algo deu errado. Tente novamente ou envie um e-mail diretamente.',
+        htlShowMore: 'Ver detalhes',
+        htlShowLess: 'Ocultar detalhes',
         footerRights: 'Todos os direitos reservados.',
       },
     };
 
+    // ── HTL icons ─────────────────────────────────────────────────────────────
+    const htlIcons = {
+      sparkles:   '<path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .962L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/>',
+      briefcase:  '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>',
+      plane:      '<line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>',
+      graduation: '<path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>',
+      wrench:     '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+      monitor:    '<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>',
+    };
+    function htlIconSVG(name, size) {
+      return '<svg width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (htlIcons[name] || htlIcons.briefcase) + '</svg>';
+    }
+
     // ── State ─────────────────────────────────────────────────────────────────
     let lang = 'en';
     let dark = localStorage.getItem('theme') !== 'light';
+
+    // ── HTL state ─────────────────────────────────────────────────────────────
+    let htlIndex = 0;
+    let htlPlaying = false;
+    let htlPlayInterval = null;
+
+    function htlCardHTML(item) {
+      return `
+        <span class="htl-card-period">${item.period}</span>
+        <h3 class="htl-card-title">${item.title}</h3>
+        <p class="htl-card-org">${item.org}</p>
+        <ul class="htl-statements">
+          ${item.statements.map(s => `
+            <li class="htl-statement">
+              <span class="htl-brief">${s.brief}</span>
+              <span class="htl-detail-wrap"><span class="htl-detail">${s.detail}</span></span>
+            </li>`).join('')}
+        </ul>
+        <button class="htl-expand-btn" aria-expanded="false">
+          <span class="htl-expand-label">${copy[lang].htlShowMore}</span>
+          <svg class="htl-expand-chevron" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>`;
+    }
+
+    function htlActivate(idx, items) {
+      htlIndex = idx;
+
+      document.querySelectorAll('.htl-item').forEach((el, i) => el.classList.toggle('is-active', i === idx));
+      document.querySelectorAll('.htl-dot-btn').forEach((btn, i) => {
+        const sel = i === idx;
+        btn.setAttribute('aria-selected', sel ? 'true' : 'false');
+        btn.setAttribute('tabindex', sel ? '0' : '-1');
+        const dotIcon = btn.querySelector('.htl-dot-icon');
+        if (dotIcon) dotIcon.style.color = sel ? items[i].color : '';
+      });
+      const counter = document.querySelector('.htl-counter');
+      if (counter) counter.textContent = `${idx + 1} / ${items.length}`;
+
+      const card = document.querySelector('.htl-card');
+      if (!card) return;
+      const item = items[idx];
+      card.classList.add('is-switching');
+      card.classList.remove('is-expanded');
+      setTimeout(() => {
+        card.style.setProperty('--htl-color', item.color);
+        card.innerHTML = htlCardHTML(item);
+        requestAnimationFrame(() => card.classList.remove('is-switching'));
+      }, 200);
+    }
+
+    function htlNavigate(idx, items) {
+      if (idx < 0 || idx >= items.length) return;
+      const itemEls = document.querySelectorAll('.htl-item');
+      if (itemEls[idx]) itemEls[idx].scrollIntoView({ inline: 'center', behavior: 'smooth', block: 'nearest' });
+      htlActivate(idx, items);
+    }
+
+    function htlUpdatePlayBtn() {
+      const btn = document.querySelector('.htl-play-btn');
+      if (!btn) return;
+      btn.classList.toggle('is-active', htlPlaying);
+      btn.setAttribute('aria-pressed', String(htlPlaying));
+      const pi = btn.querySelector('.htl-play-icon');
+      const pa = btn.querySelector('.htl-pause-icon');
+      if (pi) pi.style.display = htlPlaying ? 'none' : '';
+      if (pa) pa.style.display = htlPlaying ? '' : 'none';
+    }
+
+    function htlStopPlay() {
+      clearInterval(htlPlayInterval);
+      htlPlayInterval = null;
+      htlPlaying = false;
+      htlUpdatePlayBtn();
+    }
+
+    function htlStartPlay(items) {
+      htlStopPlay();
+      htlPlaying = true;
+      htlUpdatePlayBtn();
+      htlPlayInterval = setInterval(() => htlNavigate((htlIndex + 1) % items.length, items), 4000);
+    }
+
+    function htlExpand(card) {
+      const isExp = card.classList.contains('is-expanded');
+      const btn   = card.querySelector('.htl-expand-btn');
+      const label = card.querySelector('.htl-expand-label');
+      card.classList.toggle('is-expanded', !isExp);
+      if (btn) btn.setAttribute('aria-expanded', String(!isExp));
+      if (label) label.textContent = isExp ? copy[lang].htlShowMore : copy[lang].htlShowLess;
+    }
 
     // ── Theme ─────────────────────────────────────────────────────────────────
     const themeBtn  = document.getElementById('theme-btn');
@@ -497,19 +674,55 @@ import '../styles/global.css';
         .map(([val, label]) => `<div><strong>${val}</strong><span>${label}</span></div>`)
         .join('');
 
-      // Timeline
-      document.querySelector('.timeline').innerHTML = t.experience
-        .map(item => `
-          <article class="timeline-item">
-            <time>${item.period}</time>
-            <div>
-              <h3>${item.title}</h3>
-              <p class="org">${item.org}</p>
-              <ul>${item.points.map(p => `<li>${p}</li>`).join('')}</ul>
-              ${item.tags ? `<div class="tl-chips">${item.tags.map(tag => `<span class="tl-chip">${tag}</span>`).join('')}</div>` : ''}
+      // Timeline (horizontal carousel)
+      htlIndex = 0;
+      if (htlPlayInterval) { clearInterval(htlPlayInterval); htlPlayInterval = null; htlPlaying = false; }
+      const items = t.experience;
+      document.querySelector('.timeline').innerHTML = `
+        <div class="htl">
+          <div class="htl-controls">
+            <div class="htl-nav">
+              <button class="htl-btn htl-prev-btn" aria-label="Previous">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 19l-7-7 7-7"/></svg>
+              </button>
+              <button class="htl-btn htl-play-btn" aria-label="Play" aria-pressed="false">
+                <svg class="htl-play-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="htl-pause-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+              </button>
+              <button class="htl-btn htl-next-btn" aria-label="Next">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+              </button>
+              <span class="htl-counter">1 / ${items.length}</span>
             </div>
-          </article>`)
-        .join('');
+            <div class="htl-dots" role="tablist" aria-label="${t.experienceTitle}">
+              ${items.map((item, i) => `
+                <button class="htl-dot-btn" role="tab" data-index="${i}"
+                  aria-selected="${i === 0 ? 'true' : 'false'}"
+                  aria-label="${item.year}" tabindex="${i === 0 ? '0' : '-1'}">
+                  <span class="htl-dot-icon" style="${i === 0 ? `color:${item.color}` : ''}">${htlIconSVG(item.icon, 13)}</span>
+                </button>`).join('')}
+            </div>
+          </div>
+          <div class="htl-scroll">
+            <div class="htl-track">
+              <div class="htl-ruler"></div>
+              ${items.map((item, i) => `
+                <div class="htl-item${i === 0 ? ' is-active' : ''}" data-index="${i}" style="--htl-color:${item.color}">
+                  <span class="htl-year">${item.year}</span>
+                  <div class="htl-stem"></div>
+                  <div class="htl-node">${htlIconSVG(item.icon, 15)}</div>
+                  <div class="htl-connector"></div>
+                  ${i < items.length - 1 ? `<div class="htl-ticks">
+                    <div class="htl-tick" style="left:25%"></div>
+                    <div class="htl-tick" style="left:50%"></div>
+                    <div class="htl-tick" style="left:75%"></div>
+                  </div>` : ''}
+                </div>`).join('')}
+            </div>
+          </div>
+          <div class="htl-card" style="--htl-color:${items[0].color}"></div>
+        </div>`;
+      htlActivate(0, items);
 
       // Services
       document.querySelector('.service-grid').innerHTML = t.services
@@ -549,6 +762,38 @@ import '../styles/global.css';
     langBtn.addEventListener('click', () => {
       lang = lang === 'en' ? 'pt' : 'en';
       applyLang();
+    });
+
+    // ── Timeline carousel events ──────────────────────────────────────────────
+    document.querySelector('.timeline').addEventListener('click', e => {
+      const items = copy[lang].experience;
+      if (e.target.closest('.htl-prev-btn')) {
+        htlStopPlay();
+        htlNavigate((htlIndex - 1 + items.length) % items.length, items);
+        return;
+      }
+      if (e.target.closest('.htl-next-btn')) {
+        htlStopPlay();
+        htlNavigate((htlIndex + 1) % items.length, items);
+        return;
+      }
+      if (e.target.closest('.htl-play-btn')) {
+        htlPlaying ? htlStopPlay() : htlStartPlay(items);
+        return;
+      }
+      const dotBtn = e.target.closest('.htl-dot-btn');
+      if (dotBtn) {
+        htlStopPlay();
+        htlNavigate(parseInt(dotBtn.dataset.index), items);
+        return;
+      }
+      if (e.target.closest('.htl-expand-btn')) {
+        const card = document.querySelector('.htl-card');
+        if (card) htlExpand(card);
+        return;
+      }
+      const itemEl = e.target.closest('.htl-item');
+      if (itemEl) htlNavigate(parseInt(itemEl.dataset.index), items);
     });
 
     // ── Footer year ───────────────────────────────────────────────────────────

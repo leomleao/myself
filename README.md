@@ -22,9 +22,12 @@
 - **Plum canvas background** — generative branch-growth animation on a fixed canvas
 - **Dark / light mode** — toggle with preference persisted to `localStorage`
 - **EN / PT language toggle** — full copy swap between English and Portuguese with no page reload
+- **Social previews** — canonical, Open Graph, and X/Twitter metadata with dedicated artwork
 - **Sections** — About, Experience timeline, Services, Skills with meter bars, Contact
 - **Responsive** — single-column layout on mobile, multi-column on larger screens
 - **Zero JavaScript frameworks** — vanilla JS only; Astro compiles to pure static HTML
+
+The website-styled [LinkedIn profile banner](public/linkedin-banner.png) is ready to upload at LinkedIn's recommended 1584 × 396 dimensions.
 
 ## Getting Started
 

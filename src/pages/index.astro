@@ -1,5 +1,11 @@
 ---
 import '../styles/global.css';
+
+const pageTitle = 'Leo Leão | SAP Consultant, Developer & AI Engineer';
+const pageDescription = 'SAP AMS consultant, developer and AI engineer based in Edinburgh, combining enterprise process expertise with production-grade engineering.';
+const pageUrl = Astro.url.href;
+const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const socialImageUrl = new URL(`${basePath}og.png`, Astro.site ?? Astro.url).href;
 ---
 
 <!doctype html>
@@ -7,8 +13,24 @@ import '../styles/global.css';
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Resume and portfolio for Leo Leao, system analyst and web developer." />
-  <title>Leo Leao | vCard</title>
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDescription} />
+  <link rel="canonical" href={pageUrl} />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Leo Leão" />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDescription} />
+  <meta property="og:url" content={pageUrl} />
+  <meta property="og:image" content={socialImageUrl} />
+  <meta property="og:image:width" content="1368" />
+  <meta property="og:image:height" content="1330" />
+  <meta property="og:image:alt" content="Leo Leão — SAP Consultant, Developer and AI Engineer" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={pageTitle} />
+  <meta name="twitter:description" content={pageDescription} />
+  <meta name="twitter:image" content={socialImageUrl} />
   <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -253,7 +275,7 @@ import '../styles/global.css';
             title: 'SAP AMS Consultant',
             org: 'The Config Team Ltd · Edinburgh',
             statements: [
-              { brief: '12+ active clients across 5 industries', detail: 'ECC and S/4HANA delivery in wholesale, construction, beverages and production — incident resolution, functional specs and change delivery aligned with ITIL and SLA.' },
+              { brief: '12+ active clients across 5 industries', detail: 'ECC and S/4HANA delivery in wholesale, construction, beverages and production — incident resolution, functional specs and change delivery aligned with ITIL and SLA. Comfortable reading and debugging ABAP when needed.' },
               { brief: 'Named AI Champion for the company', detail: 'Mapped every manual step in the consultant workflow and rebuilt them as agent-driven tasks using custom MCP servers, connecting AI to live ticket data and SharePoint.' },
               { brief: 'Automated document generation from tickets', detail: 'Eliminated manual formatting and copy-paste — quotes, unit test documents and functional specs now generated directly from ticket history.' },
               { brief: 'Self-improving quality loop', detail: 'AI draft → consultant edits → AI diffs both versions and refines future outputs, compounding quality over time without extra token spend.' },
@@ -284,9 +306,9 @@ import '../styles/global.css';
             title: 'System Analysis & Development',
             org: 'Fatec · Jundiai',
             statements: [
-              { brief: '6-semester tech degree: 2,400 hours of engineering', detail: 'Software Engineering across 4 modules, programming in C and Java, data structures, databases, OS, networks and security — plus electives in Script Programming and AI.' },
-              { brief: 'The bridge between two worlds', detail: 'The formal training behind operating as both SAP consultant and production engineer — reading ABAP, writing APIs, building MCP servers — without being only one.' },
-              { brief: '240h internship + 160h graduation project', detail: 'Practical systems work beyond the classroom — applying full-stack and systems-thinking in real environments before entering the professional market.' },
+              { brief: "Bachelor's in Systems Analysis & Development", detail: 'Software Engineering curriculum covering programming in C, Java and PHP, data structures, databases, operating systems, networks and security — plus electives in Script Programming and AI.' },
+              { brief: 'The bridge between two worlds', detail: 'The formal training behind operating as both SAP consultant and software developer — reading ABAP, building APIs in Node.js and Java, writing PHP backends — without being only one.' },
+              { brief: 'Internship + graduation project', detail: 'Practical systems work beyond the classroom — applying full-stack and systems-thinking in real environments before entering the professional market.' },
             ],
           },
           {
@@ -404,7 +426,7 @@ import '../styles/global.css';
             title: 'Consultor SAP AMS',
             org: 'The Config Team Ltd · Edimburgo',
             statements: [
-              { brief: '12+ clientes ativos em 5 setores', detail: 'Entrega ECC e S/4HANA em atacado, construção, bebidas e produção — resolução de incidentes, specs funcionais e entrega de mudanças conforme ITIL e SLA.' },
+              { brief: '12+ clientes ativos em 5 setores', detail: 'Entrega ECC e S/4HANA em atacado, construção, bebidas e produção — resolução de incidentes, specs funcionais e entrega de mudanças conforme ITIL e SLA. Lê e depura ABAP quando necessário.' },
               { brief: 'Designado AI Champion da empresa', detail: 'Mapeou cada etapa manual do fluxo dos consultores e reconstruiu como tarefas geridas por agentes, conectando IA a dados de tickets e SharePoint em tempo real.' },
               { brief: 'Geração automatizada de documentos a partir de tickets', detail: 'Eliminou formatação manual e cópias — quotes, documentos de testes unitários e specs funcionais agora gerados diretamente do histórico de tickets.' },
               { brief: 'Ciclo de autoaprimoramento de qualidade', detail: 'Rascunho da IA → edição do consultor → IA compara as versões e refina saídas futuras, melhorando a qualidade progressivamente sem custo extra.' },
@@ -435,9 +457,9 @@ import '../styles/global.css';
             title: 'Análise e Desenvolvimento de Sistemas',
             org: 'Fatec · Jundiai',
             statements: [
-              { brief: 'Curso superior de tecnologia: 2.400 horas de engenharia', detail: 'Engenharia de Software em 4 módulos, programação em C e Java, estruturas de dados, bancos de dados, SO, redes e segurança — mais eletivas em Programação de Scripts e Inteligência Artificial.' },
-              { brief: 'A ponte entre dois mundos', detail: 'A formação formal por trás de atuar como consultor SAP e engenheiro de produção — lendo ABAP, escrevendo APIs, construindo servidores MCP — sem ser apenas um dos dois.' },
-              { brief: 'Estágio de 240h + Trabalho de Graduação de 160h', detail: 'Trabalho prático de sistemas além da sala de aula — aplicando raciocínio full-stack e de sistemas em ambientes reais antes de entrar no mercado profissional.' },
+              { brief: 'Bacharelado em Análise e Desenvolvimento de Sistemas', detail: 'Currículo de Engenharia de Software com programação em C, Java e PHP, estruturas de dados, bancos de dados, SO, redes e segurança — mais eletivas em Programação de Scripts e Inteligência Artificial.' },
+              { brief: 'A ponte entre dois mundos', detail: 'A formação formal por trás de atuar como consultor SAP e desenvolvedor de software — lendo ABAP, construindo APIs em Node.js e Java, escrevendo backends em PHP — sem ser apenas um dos dois.' },
+              { brief: 'Estágio + Trabalho de Graduação', detail: 'Trabalho prático de sistemas além da sala de aula — aplicando raciocínio full-stack e de sistemas em ambientes reais antes de entrar no mercado profissional.' },
             ],
           },
           {
